@@ -1,0 +1,3641 @@
+/**************************************
+* Project Name:盛传移动商务平台
+* Time:2016-03-22
+* Author:MarkingChanning QQ:380992882
+**************************************/
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>盛传移动商务平台标准版----(红贵族 黄江店) 盛传网络技术有限公司 版权所有</title>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="user-scalable=yes,maximum-scale=1.0">
+		<meta name="renderer" content="webkit">
+		<meta http-equiv="Cache-Control" content="no-siteapp"/>
+		
+		<link href="/shair/css/pintuer.css" rel="stylesheet" type="text/css">
+		<link href="/shair/js/plugin/chosen/chosen.css" rel="stylesheet" type="text/css">
+		<link href="/shair/css/comm.css" rel="stylesheet" type="text/css">
+		<link href="/shair/css/manage.css" rel="stylesheet" type="text/css">
+	    <!-- 组件lib 请尽量不要修改 -->
+	    <script src="/shair/js/jquery-1.11.1.min.js" type="text/javascript"></script>
+		<script src="/shair/js/jquery.form.js" type="text/javascript"></script>
+	    <script src="/shair/js/plugin/My97DatePicker/WdatePicker.js" type="text/javascript"></script>
+		<script src="/shair/js/plugin/moment/moment.min.js" type="text/javascript"></script>
+	    <script src="/shair/js/plugin/chosen/chosen.jquery.min.js" type="text/javascript"></script>
+		<script src="/shair/js/plugin/floatThead/jquery.floatThead.min.js" type="text/javascript"></script>
+	    <script src="/shair/js/pintuer.js" type="text/javascript"></script>
+	    <!--[if lte IE 8 ]>
+		<script src="/shair/js/respond.js"></script>
+		<![endif]-->
+	    <script src="/shair/js/jquery.sentree.comm.js" type="text/javascript"></script>
+		<script src="/shair/js/pageFuncs.js" type="text/javascript"></script>
+		<script src="/shair/js/main.js" type="text/javascript"></script>
+		<script src="/shair/js/map.js" type="text/javascript"></script>
+		<script src="/shair/js/cardType.js" type="text/javascript"></script>
+		<script type="text/javascript" src="/shair/js/IsCheck.js"></script>
+		<style type="text/css">
+		.detailtable input {
+			text-align: center;
+			width: 100%;
+			background-color: #FFFFFF;
+			border: 0
+		}
+		.color1 {
+			color: #2791FC
+		}
+		
+		.color2 {
+			color: #ff0000
+		}
+		
+		.color3 {
+			color: #aaaaaa
+		}
+		.table2{ border:1px solid #ACA899;}
+		</style>
+		
+	</head>
+
+	<body>
+		<!-- 导航菜单 -->
+		
+
+
+
+
+
+<script type="text/javascript">
+	var role = '3',
+		powerStr = 'A,A4,A0,A1,A2,D,D0,D00,D01,D02,D03,D04,D05,D06,E,E0,E00,E01,E03,E04,E06,E1,E10,E11,E12,E13,E02,E14,E05,E2,E3,F,F0,F00,F01,F02,F03,F04,F1,F10,F11,F05,F2,G,G0,G00,G01,G02,G03,G1,G10,G11,G12,G2,G20,G21,G22,G23,H,H0,H00,H01,H1,H10,H11,H12,H13,H2,H20,H21,H22,I,I1,I10,I11,I12,I2,I20,I21,I22,I0,I00,I01,I02,I03,I04,J,J0,J00,J01,J02,J1,J2,J3,j30,j31,J4,J5,K,K0,K00,K01,K02,K1,K10,K11,K12,K13,K2,K20,K21,L,L0,L1,L2,L20,L21,L22,M,M0,M00,M01,M02,M03,M1,M10,M11,M12,M13,M14,M15,M16,M17,M18M2,M20,M21,M22,M23,M24,M25,M26,M3,M30,M32,M33,M34,M35,M36,M37,M4,M40,M41,M42,M43,,K14,,M0,,',
+		sessionSonFlag = '0',
+		sessionShopId = '131071',
+		menu_set = 'cash',
+		menu_pack = 'member',
+		servDate = '2016-03-22',
+		basePath = '/shair/',
+		realDate = moment(servDate),
+		roleMinDate = role == 1 ? realDate.clone().subtract(1, 'days').format('YYYY-MM-DD') : role == 2 ? realDate.clone().subtract(5, 'months').format('YYYY-MM-DD') : '',
+		roleMinBillDate = role == 1 ? realDate.clone().subtract(1, 'days').format('YYYY-MM-DD') : role == 2 ? realDate.clone().subtract(4, 'days').format('YYYY-MM-DD') : realDate.clone().subtract(6, 'months').format('YYYY-MM-DD'),
+		roleMinReportDate = role == 1 ? realDate.clone().subtract(1, 'days').format('YYYY-MM-DD') : role == 2 ? realDate.clone().subtract(5, 'months').format('YYYY-MM-DD') : '';
+	$.loadingshow();
+</script>
+<div class="page_nav">
+	<!-- <div class="logo" id="naviToggle">
+		<img src="/shair/img/icon_navitoggle.png" class="icon tips" data-index="20" data-position="fixed" data-toggle="hover" data-place="right" title="收起/展开菜单">
+	</div>
+	<div class="nav_scroll scroll_up hidden"></div> -->
+	
+		
+			<!-- 收银菜单 -->
+			<div class="page_nav_container">
+				<ul class="page_navList">
+					
+						<li >
+							<a href="/shair/consumerHelp!init.action?r=1458611876308" >
+								<span class="icon icon_cash"></span>
+								<span class="name">收银</span>
+								<span class="bg bg_cash"></span>
+							</a>
+						</li>
+					
+					
+						
+							<li class="hidden">
+								<a href="/shair/consume!booking.action?set=cash" >
+									<span class="icon icon_prebill"></span>
+									<span class="name">预开单</span>
+									<span class="bg bg_prebill"></span>
+								</a>
+							</li>
+						
+					
+					<li class="hidden">
+						<a class="load_menu " data-code="C" href="javascript:;">
+							<span class="icon icon_reserv"></span>
+							<span class="name">预约</span>
+							<span class="bg bg_reserv"></span>
+						</a>
+					</li>
+					<li >
+						<a href="/shair/expenses!expenses.action?set=cash" >
+							<span class="icon icon_expenses"></span>
+							<span class="name">开支</span>
+							<span class="bg bg_expenses"></span>
+						</a>
+					</li>
+					
+					<li >
+						<a class="load_menu " data-code="E" href="javascript:;">
+							<span class="icon icon_bill"></span>
+							<span class="name">营业记录</span>
+							<span class="bg bg_bill"></span>
+						</a>
+					</li>
+
+					<li >
+						<a class="href_menu" href="/shair/collect!day.action">
+							<span class="icon icon_collect"></span>
+							<span class="name">营业汇总</span>
+							<span class="bg bg_collect"></span>
+						</a>
+					</li>
+					<li >
+						<a class="load_menu active" data-code="F" href="javascript:;">
+							<span class="icon icon_member"></span>
+							<span class="name">会员管理</span>
+							<span class="bg bg_member"></span>
+						</a>
+					</li>
+					<li >
+						<a class="load_menu " data-code="I" href="javascript:;">
+							<span class="icon icon_stock"></span>
+							<span class="name">库存管理</span>
+							<span class="bg bg_stock"></span>
+						</a>
+					</li>
+					<li >
+						<a class="load_menu " data-code="H1" href="javascript:;">
+							<span class="icon icon_emp"></span>
+							<span class="name">员工考勤</span>
+							<span class="bg bg_emp"></span>
+						</a>
+					</li>
+				</ul>
+			</div>
+		
+		
+		
+	
+	<!-- <div class="nav_scroll scroll_down hidden"></div> -->
+	<div class="button-group dropdown navi_set">
+		<a href="/shair/main!showMain.action" class="button_home tips" data-toggle="hover" data-place="left"  title="首页" id="page-home">首页</a>
+		<ul class="drop-menu">
+			
+			
+			
+				<li><a class="href_menu" href="/shair/main!showDesk.action"><i class="iconfont">&#xe611;</i> 管理层</a></li>
+			
+			
+				<li><a class="href_menu" href="/shair/busTotal!day.action"><i class="iconfont">&#xe610;</i> 决策层</a></li>
+			
+		</ul>
+	</div>
+</div>
+<div class="scroll_top off tips" data-position="fixed" data-toggle="hover" data-place="left" title="返回顶部"></div>
+<!-- 快捷菜单 -->
+<div class="page_tip_nav" id="nav-pills4">
+	<ul class="nav nav-menu nav-inline nav-pills nav-right nav-navicon text-small">
+		<!-- <li class="hidden_li hidden"><a class="nav-bg-bangzhu" href="javascript:;" title="帮助"></a></li> -->
+		<li class="hidden_li"><a class="nav-bg-tuichu tips" data-toggle="hover" data-place="bottom" href="javascript:;" title="退出" onClick="$.confirm('确定要退出系统吗?', function(){location.href = basePath + 'loginAction!logout.action?from=base'})"></a></li>
+		<li class="hidden_li"><a class="nav-bg-idea tips" data-toggle="hover" data-place="bottom" href="javascript:;" title="投诉/表扬"></a></li>
+		<li class="hidden_li"><a class="nav-bg-suo tips lock_screen" data-toggle="hover" data-place="bottom" href="javascript:;" title="锁屏"></a></li>
+		
+		<li>
+			<a class="nav-bg-tixing" href="javascript:;"></a>
+			<ul class="drop-menu">
+				<li><a class="notice_see" href="javascript:;">最新通知</a></li>
+				
+				
+					<li><a class="href_menu msg_see" href="/shair/smsRecord!moSms.action">未读短信</a></li>
+				
+				
+					<li><a class="href_menu member_birth_see" href="/shair/memberBirth!init.action?set=cash">会员生日</a></li>
+				
+				
+				
+					<li><a class="href_menu emp_birth_see" href="/shair/employeeBirth!init.action">员工生日</a></li>
+				
+				
+				
+					<li><a class="href_menu stock_warning_see" href="/shair/storagestock!init.action?set=cash">库存报警</a></li>
+				
+				
+					<li><a class="href_menu member_invalid_see" href="/shair/memberCard!getInvalidMember.action?set=cash">会员过期</a></li>
+				
+			</ul>
+		</li>		
+		<li><a target="_blank" href="javascript:$.dialog('#overplustip', '870px', false, false);"><img border="0" src="/shair/img/group.png" alt="在线支持" title="在线支持"></a></li>
+	</ul>
+
+<div class="dialog" id="overplustip" >
+	<div class="dialog-body">
+	<iframe width="100%" height="300px" name=aa frameborder=0 src="http://mgmt.reeli.cn:9999/CustomerService/static/iframe.html"></iframe>
+	</div>
+	<div class="dialog-foot">
+		<button class="dialog-close button">关闭</button>
+	</div>
+</div>
+	
+</div>
+<!-- 锁屏 -->
+<div class="dialog" id="lockDialog">
+	<div class="dialog-body dialog-body-nopadding">
+		<div class="input-inline clearfix">
+			<input type="password" class="input" name="lock_password"placeholder="请输入用户密码" />
+			<input class="button bg-green unlock_screen" type="button" value="解锁" />
+		</div>
+	</div>
+</div>
+<div id="bottomTip" style="position: fixed; bottom: 0; left: 135px; right: 0; background-color: #ddd;"></div>
+		<div class="page_main">
+			
+	        <div class="page_header">
+	           
+	            <!-- 二级菜单 -->
+				
+
+
+
+
+
+
+
+	
+		
+		
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+				<ul class="page_tab_m">
+					
+						<li class="selected"><a class="button load_menu" data-code="F0" href="javascript:;">会员资料 </a></li>
+					
+					
+						<li ><a class="button load_menu" data-code="F1" href="javascript:;">会员消费分析</a></li>
+					
+					
+						<li ><a class="button href_menu" href="/shair/pubComment!init.action?set=cash">顾客评论记录</a></li>
+					
+				</ul>
+			
+			
+			
+		
+	
+	
+
+
+			</div>
+	
+	        <div class="page_container with_table">
+				<!-- 三级菜单 -->
+				
+
+
+
+
+
+	
+	
+	
+	
+	
+	
+		<ul class="card_tab">
+			
+				<li class="selected"><a class="href_menu" href="/shair/memberInfo!memberlist.action?set=cash"><span class="name">会员资料</span></a></li>
+        	
+			
+				<li ><a class="href_menu" href="/shair/memberInfo!memberdelinfo.action?set=cash"><span class="name">已删除会员资料</span></a></li>
+        	
+			
+				<li ><a class="href_menu" href="/shair/memberInfo!initOnlyMember.action?set=cash"><span class="name">会员汇总数据查询</span></a></li>
+        	
+			
+				<li ><a class="href_menu" href="/shair/memberCard!getInvalidMember.action?set=cash"><span class="name">过期会员查询</span></a></li>
+        	
+			
+				<li ><a class="href_menu" href="/shair/memberBirth!init.action?set=cash"><span class="name">会员生日提醒</span></a></li>
+			
+			
+				<li ><a class="href_menu" href="/shair/memberImport!init.action?set=cash"><span class="name">会员导入</span></a></li>
+			
+			
+        </ul>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	 
+	
+	    
+	
+	  
+	
+	 
+	
+	 
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+
+
+				
+				<div class="tab padding-top">
+					<div class="tab-head">
+						<ul class="tab-nav" >
+							<li class="active"><a href="/shair/memberInfo!memberlist.action?set=cash" onclick="$.loadingshow();">会员资料</a></li>
+							<li><a href="/shair/timesItem!initTimes.action?set=cash" onclick="$.loadingshow();">计次项目会员</a></li>
+							<li><a href="/shair/timesItem!initTreat.action?set=cash" onclick="$.loadingshow();">疗程项目会员</a></li>
+						</ul>
+					</div>
+					<div class="tab-body"></div>
+				</div>
+				
+				<div class="search-option">
+					<form method="post" class="form-inline">
+						<div class="form-group">
+							<div class="label">
+								<label >关键字：</label>
+							</div>
+							<div class="field">
+								<input type="text"  class="input" onkeyup="if((window.event?event.keyCode:event.which) == 13){searh_submit();}" id="temp_keyword" value="" size="15">
+							</div>
+						</div>
+						<div class="form-group">
+							<div class="form-button">
+								<button id="btnSearch" class="button bg-blue" type="button" onclick="searh_submit();">快速查询</button>
+							</div>
+						</div>
+						<div class="form-group">
+							<div class="form-button">
+								<button class="button bg-blue dialogs" type="button" onclick="$.dialog('#h_search','83%',true,true);" >高级查询</button>
+							</div>
+						</div>
+						
+							<div class="form-group">
+								<div class="form-button">
+									<button type="button" class="button bg-blue"  onClick="editMutil();">批量修改会员</button>
+								</div>
+							</div>
+							
+						
+			        	
+			        		<div class="form-group">
+								<div class="form-button">
+									<button type="button" class="button bg-red"  onclick="delRow()">删 除</button>
+									<a href="javascript:void(0);" onClick="$('#memberbut').show();$('#treatmemberbut').show();"><font color=white>active</font></a>
+								</div>
+							</div>
+						
+					</form>
+				</div>
+			</div>
+			<table border="0" width="100%" class="tip" cellpadding="0" cellspacing="0">
+		<tr valign="middle" height="12px">
+			
+				
+					<td width="20px" rowspan="3"></td>
+					<td height="8px" width="50px"></td>
+					<td height="20px" width="150px" rowspan="3" style="">&nbsp;30天至60天未来店消费</td>
+					<td width="50px"></td>
+					<td height="20px" width="150px" rowspan="3">&nbsp;60天至90天未来店消费</td>
+					<td width="50px"></td>
+					<td height="20px" width="150px" rowspan="3">&nbsp;90天以上未来店消费</td>
+				
+			
+			<td height="35px" rowspan="3">
+				<div style="margin-right:20px">
+					<button type=button onClick="sendSms()" id="sms2" class="button bg-blue"  title="给查询顾客发送短信">给查询顾客发送短信</button>
+					&nbsp;
+					<button type=button onClick="exportMember();" class="button bg-blue" >导出查询结果</button>
+					&nbsp;
+					<button id="memberbut" type=button onClick="exportMemberToRl();" class="button bg-yellow"  style="display:none;">导出会员资料</button>
+					&nbsp;
+					<button id="treatmemberbut" type=button onClick="exportTreatMemberToRl();" class="button bg-yellow"  style="display:none;">导出疗程会员资料</button>
+				</div>
+			</td>
+			<td width="5px" rowspan="3"></td>
+		</tr>
+		<tr>
+			<td height="9px" bgcolor=#2791FC></td>
+			<td bgcolor=#ff0000></td>
+			<td bgcolor=#aaaaaa></td>
+		</tr>
+		<tr>
+			<td height="14px"></td>
+			<td></td>
+			<td></td>
+		</tr>
+	</table>
+	
+	
+	<p class="summary_number">
+		
+								
+					<span class="TColor11 Bold">
+						本次查询出的所有会员卡内总余额:<span class="value">30893.0元,</span>
+						赠送总余额:<span class="value">4937.0元,</span>
+						总积分:<span class="value">0.0分;</span>
+						当前门店所有会员总充值欠款:<span class="value">0.0元,</span>
+						总消费欠款:<span class="value">0.0元.</span>
+					</span>
+			
+		
+	</p>
+		
+		<div class="table-responsive">
+		<form method="post" id="delForm">
+		<input name="set" type="hidden" id="set" value="cash" />
+		<input name="membercardid" type="hidden" id="membercardid" value="" />
+		
+		<input name="memberForm.shopid" type="hidden" id="pageShopId" value="131071" onchange="$('#btnSearch').click();"/>
+		<table class="table table-striped table-hover table_fixed_head">
+		<thead>
+			<tr>
+         		<th rowspan="2" height="20px" width="3%">全选<input name=chkall type=checkbox value=on onclick="checkAll(this, 'cb')" /> </th>
+              	<th width="8%" rowspan="2">手机号</th>
+              	<th rowspan="2">姓名</th>    
+              	<th rowspan="2">性别</th>  
+              	<th rowspan="2">会员分类</th>                                                                      
+              	<th width="8%" rowspan="2">注册日期</th>                                   
+              	<th colspan="10" width="50%">卡账户信息</th>
+              	<th rowspan="2">消费次数</th>
+              	<th rowspan="2">当前积分</th>
+              	<th width="8%" rowspan="2">最后消费日</th>
+          		
+			</tr>
+			<tr>
+				<th>卡号</th>
+              	<th>卡名称</th>
+              	<th>卡类型</th>
+              	<th>折扣</th>
+              	<th>储值总额</th> 
+              	<th>消费总额</th>
+              	<th>卡内余额</th>
+              	<th>赠送余额</th>
+              	<th>失效日期</th>
+              	<th>操作</th>
+			</tr>
+			</thead>
+			<tbody>
+				
+            <tr>
+              	<td height=30><input type="checkbox" name="cb" value="42249584"></td>
+              	<td>
+    				<a class="BL" href="#" title="点击修改会员资料" style="cursor: pointer;" onClick="editmember('42249584',131071);">2222222&nbsp;</a>
+              	</td>
+              	<td><span class="color">222222</span></td>
+              	
+              		
+              			<td>女</td>  
+              		
+              		
+              	
+              	<td>
+              		
+              			
+              		
+              			
+              		
+              			
+              		
+              	</td>      
+              	<td>
+              		Sun Mar 20 00:00:00 CST 2016
+			  	</td>
+	              	<td colspan="10" class="subtable">
+	              		
+	              			<table class="table">
+		              		
+		              		<tr id="cardtr221035918">
+			            		<td><a class="BL" href="#" title="点击修改会员资料" style="cursor: pointer;" onClick="$.dialog('/shair/memberArchives!editMember.action?id=221035918&shopid=131071&flag=1&ts='+new Date().getTime(),'80%',true,true)">1212314124</a></td>
+			            		<td>大厦</td>
+			            		<td>
+			            			
+			            				
+			            				
+										
+										
+										<span style="color: red;">疗程消费</span>
+										
+									
+			            		</td>
+			            		<td>
+			            			10
+			            		</td>
+				              	<td>402.0元</td>
+				              	<td>0.0元</td>
+				              	<td>
+			         				100.0元
+			         				
+									
+	           							</br><span style="color: red; width: 100%;">疗程:202.0元</span>
+	           						
+			         			</td>
+				              	<td>
+				              		0.0元
+				              		
+				              	</td>
+				              	<td>
+				              		
+				              	</td>
+				              	<td>
+				              		
+				              			<a class="BL" href="#" title="删除会员卡" style="cursor: pointer;" onClick="delCard('221035918')"><span class="tag bg-dot">删除卡</span></a>
+				              		
+				              		
+				              	</td>
+				            <tr>
+			            	
+			            	</table>
+		            	
+	              	</td>
+	              
+	              	<td align="center">0次</td>
+	              	<td align="center"><input style="border:1px solid #CCCCCC" type="text" size="4" readonly="readonly" value="0分"/></td>
+	              	<td align="center">&nbsp;</td>
+	             	
+			</tr>
+			
+            <tr>
+              	<td height=30><input type="checkbox" name="cb" value="42249449"></td>
+              	<td>
+    				<a class="BL" href="#" title="点击修改会员资料" style="cursor: pointer;" onClick="editmember('42249449',131071);">18665163360&nbsp;</a>
+              	</td>
+              	<td><span class="color">刘志</span></td>
+              	
+              		
+              		
+              			<td>男</td>  
+              		
+              	
+              	<td>
+              		
+              			
+              		
+              			
+              		
+              			
+              		
+              	</td>      
+              	<td>
+              		Sun Mar 20 00:00:00 CST 2016
+			  	</td>
+	              	<td colspan="10" class="subtable">
+	              		
+	              			<table class="table">
+		              		
+		              		<tr id="cardtr221035783">
+			            		<td><a class="BL" href="#" title="点击修改会员资料" style="cursor: pointer;" onClick="$.dialog('/shair/memberArchives!editMember.action?id=221035783&shopid=131071&flag=1&ts='+new Date().getTime(),'80%',true,true)">1111111</a></td>
+			            		<td>套餐次卡</td>
+			            		<td>
+			            			
+			            				
+			            				
+										
+										<span style="color: red;">计次消费</span>
+										
+										
+									
+			            		</td>
+			            		<td>
+			            			8
+			            		</td>
+				              	<td>1.0元</td>
+				              	<td>0.0元</td>
+				              	<td>
+			         				1.0元
+			         				
+										</br><span style="color: red; width: 100%;">余:次</span>
+									
+									
+			         			</td>
+				              	<td>
+				              		0.0元
+				              		
+				              	</td>
+				              	<td>
+				              		
+				              	</td>
+				              	<td>
+				              		
+				              			<a class="BL" href="#" title="删除会员卡" style="cursor: pointer;" onClick="delCard('221035783')"><span class="tag bg-dot">删除卡</span></a>
+				              		
+				              		
+				              	</td>
+				            <tr>
+			            	
+			            	</table>
+		            	
+	              	</td>
+	              
+	              	<td align="center">2次</td>
+	              	<td align="center"><input style="border:1px solid #CCCCCC" type="text" size="4" readonly="readonly" value="0分"/></td>
+	              	<td align="center">Sun Mar 20 00:00:00 CST 2016&nbsp;</td>
+	             	
+			</tr>
+			
+            <tr>
+              	<td height=30><input type="checkbox" name="cb" value="42210475"></td>
+              	<td>
+    				<a class="BL" href="#" title="点击修改会员资料" style="cursor: pointer;" onClick="editmember('42210475',131071);">13712808450&nbsp;</a>
+              	</td>
+              	<td><span class="color">邓文英</span></td>
+              	
+              		
+              			<td>女</td>  
+              		
+              		
+              	
+              	<td>
+              		
+              			
+              		
+              			
+              		
+              			
+              		
+              	</td>      
+              	<td>
+              		Thu Mar 17 00:00:00 CST 2016
+			  	</td>
+	              	<td colspan="10" class="subtable">
+	              		
+	              			<table class="table">
+		              		
+		              		<tr id="cardtr220996568">
+			            		<td><a class="BL" href="#" title="点击修改会员资料" style="cursor: pointer;" onClick="$.dialog('/shair/memberArchives!editMember.action?id=220996568&shopid=131071&flag=1&ts='+new Date().getTime(),'80%',true,true)">80000155</a></td>
+			            		<td>白金卡</td>
+			            		<td>
+			            			
+			            				
+			            				
+										储值卡
+										
+										
+										
+									
+			            		</td>
+			            		<td>
+			            			10
+			            		</td>
+				              	<td>79.0元</td>
+				              	<td>0.0元</td>
+				              	<td>
+			         				79.0元
+			         				
+									
+			         			</td>
+				              	<td>
+				              		0.0元
+				              		
+				              	</td>
+				              	<td>
+				              		
+				              	</td>
+				              	<td>
+				              		
+				              			<a class="BL" href="#" title="删除会员卡" style="cursor: pointer;" onClick="delCard('220996568')"><span class="tag bg-dot">删除卡</span></a>
+				              		
+				              		
+				              	</td>
+				            <tr>
+			            	
+			            	</table>
+		            	
+	              	</td>
+	              
+	              	<td align="center">0次</td>
+	              	<td align="center"><input style="border:1px solid #CCCCCC" type="text" size="4" readonly="readonly" value="0分"/></td>
+	              	<td align="center">&nbsp;</td>
+	             	
+			</tr>
+			
+            <tr>
+              	<td height=30><input type="checkbox" name="cb" value="42193976"></td>
+              	<td>
+    				<a class="BL" href="#" title="点击修改会员资料" style="cursor: pointer;" onClick="editmember('42193976',131071);">13728498775&nbsp;</a>
+              	</td>
+              	<td><span class="color">钟媚</span></td>
+              	
+              		
+              			<td>女</td>  
+              		
+              		
+              	
+              	<td>
+              		
+              			
+              		
+              			
+              		
+              			
+              		
+              	</td>      
+              	<td>
+              		Wed Mar 16 00:00:00 CST 2016
+			  	</td>
+	              	<td colspan="10" class="subtable">
+	              		
+	              			<table class="table">
+		              		
+		              		<tr id="cardtr220980039">
+			            		<td><a class="BL" href="#" title="点击修改会员资料" style="cursor: pointer;" onClick="$.dialog('/shair/memberArchives!editMember.action?id=220980039&shopid=131071&flag=1&ts='+new Date().getTime(),'80%',true,true)">80000154</a></td>
+			            		<td>白金卡</td>
+			            		<td>
+			            			
+			            				
+			            				
+										储值卡
+										
+										
+										
+									
+			            		</td>
+			            		<td>
+			            			10
+			            		</td>
+				              	<td>400.0元</td>
+				              	<td>383.0元</td>
+				              	<td>
+			         				17.0元
+			         				
+									
+			         			</td>
+				              	<td>
+				              		0.0元
+				              		
+				              	</td>
+				              	<td>
+				              		
+				              	</td>
+				              	<td>
+				              		
+				              			<a class="BL" href="#" title="删除会员卡" style="cursor: pointer;" onClick="delCard('220980039')"><span class="tag bg-dot">删除卡</span></a>
+				              		
+				              		
+				              	</td>
+				            <tr>
+			            	
+			            	</table>
+		            	
+	              	</td>
+	              
+	              	<td align="center">4次</td>
+	              	<td align="center"><input style="border:1px solid #CCCCCC" type="text" size="4" readonly="readonly" value="0分"/></td>
+	              	<td align="center">Sat Mar 19 00:00:00 CST 2016&nbsp;</td>
+	             	
+			</tr>
+			
+            <tr>
+              	<td height=30><input type="checkbox" name="cb" value="42187578"></td>
+              	<td>
+    				<a class="BL" href="#" title="点击修改会员资料" style="cursor: pointer;" onClick="editmember('42187578',131071);">15017180232&nbsp;</a>
+              	</td>
+              	<td><span class="color">周武杰</span></td>
+              	
+              		
+              		
+              			<td>男</td>  
+              		
+              	
+              	<td>
+              		
+              			
+              		
+              			
+              		
+              			
+              		
+              	</td>      
+              	<td>
+              		Wed Mar 16 00:00:00 CST 2016
+			  	</td>
+	              	<td colspan="10" class="subtable">
+	              		
+	              			<table class="table">
+		              		
+		              		<tr id="cardtr220973611">
+			            		<td><a class="BL" href="#" title="点击修改会员资料" style="cursor: pointer;" onClick="$.dialog('/shair/memberArchives!editMember.action?id=220973611&shopid=131071&flag=1&ts='+new Date().getTime(),'80%',true,true)">80000153</a></td>
+			            		<td>白金卡</td>
+			            		<td>
+			            			
+			            				
+			            				
+										储值卡
+										
+										
+										
+									
+			            		</td>
+			            		<td>
+			            			10
+			            		</td>
+				              	<td>300.0元</td>
+				              	<td>77.0元</td>
+				              	<td>
+			         				223.0元
+			         				
+									
+			         			</td>
+				              	<td>
+				              		0.0元
+				              		
+				              	</td>
+				              	<td>
+				              		
+				              	</td>
+				              	<td>
+				              		
+				              			<a class="BL" href="#" title="删除会员卡" style="cursor: pointer;" onClick="delCard('220973611')"><span class="tag bg-dot">删除卡</span></a>
+				              		
+				              		
+				              	</td>
+				            <tr>
+			            	
+			            	</table>
+		            	
+	              	</td>
+	              
+	              	<td align="center">2次</td>
+	              	<td align="center"><input style="border:1px solid #CCCCCC" type="text" size="4" readonly="readonly" value="0分"/></td>
+	              	<td align="center">Fri Mar 18 00:00:00 CST 2016&nbsp;</td>
+	             	
+			</tr>
+			
+            <tr>
+              	<td height=30><input type="checkbox" name="cb" value="42179359"></td>
+              	<td>
+    				<a class="BL" href="#" title="点击修改会员资料" style="cursor: pointer;" onClick="editmember('42179359',131071);">15818236282&nbsp;</a>
+              	</td>
+              	<td><span class="color">吴运青</span></td>
+              	
+              		
+              			<td>女</td>  
+              		
+              		
+              	
+              	<td>
+              		
+              			
+              		
+              			
+              		
+              			
+              		
+              	</td>      
+              	<td>
+              		Tue Mar 15 00:00:00 CST 2016
+			  	</td>
+	              	<td colspan="10" class="subtable">
+	              		
+	              			<table class="table">
+		              		
+		              		<tr id="cardtr220965348">
+			            		<td><a class="BL" href="#" title="点击修改会员资料" style="cursor: pointer;" onClick="$.dialog('/shair/memberArchives!editMember.action?id=220965348&shopid=131071&flag=1&ts='+new Date().getTime(),'80%',true,true)">80000152</a></td>
+			            		<td>白金卡</td>
+			            		<td>
+			            			
+			            				
+			            				
+										储值卡
+										
+										
+										
+									
+			            		</td>
+			            		<td>
+			            			10
+			            		</td>
+				              	<td>202.0元</td>
+				              	<td>0.0元</td>
+				              	<td>
+			         				202.0元
+			         				
+									
+			         			</td>
+				              	<td>
+				              		0.0元
+				              		
+				              	</td>
+				              	<td>
+				              		
+				              	</td>
+				              	<td>
+				              		
+				              			<a class="BL" href="#" title="删除会员卡" style="cursor: pointer;" onClick="delCard('220965348')"><span class="tag bg-dot">删除卡</span></a>
+				              		
+				              		
+				              	</td>
+				            <tr>
+			            	
+			            	</table>
+		            	
+	              	</td>
+	              
+	              	<td align="center">0次</td>
+	              	<td align="center"><input style="border:1px solid #CCCCCC" type="text" size="4" readonly="readonly" value="0分"/></td>
+	              	<td align="center">&nbsp;</td>
+	             	
+			</tr>
+			
+            <tr>
+              	<td height=30><input type="checkbox" name="cb" value="42138343"></td>
+              	<td>
+    				<a class="BL" href="#" title="点击修改会员资料" style="cursor: pointer;" onClick="editmember('42138343',131071);">13712393094&nbsp;</a>
+              	</td>
+              	<td><span class="color">张艳芳</span></td>
+              	
+              		
+              			<td>女</td>  
+              		
+              		
+              	
+              	<td>
+              		
+              			
+              		
+              			
+              		
+              			
+              		
+              	</td>      
+              	<td>
+              		Sat Mar 12 00:00:00 CST 2016
+			  	</td>
+	              	<td colspan="10" class="subtable">
+	              		
+	              			<table class="table">
+		              		
+		              		<tr id="cardtr220924171">
+			            		<td><a class="BL" href="#" title="点击修改会员资料" style="cursor: pointer;" onClick="$.dialog('/shair/memberArchives!editMember.action?id=220924171&shopid=131071&flag=1&ts='+new Date().getTime(),'80%',true,true)">80000151</a></td>
+			            		<td>白金卡</td>
+			            		<td>
+			            			
+			            				
+			            				
+										储值卡
+										
+										
+										
+									
+			            		</td>
+			            		<td>
+			            			10
+			            		</td>
+				              	<td>400.0元</td>
+				              	<td>318.0元</td>
+				              	<td>
+			         				182.0元
+			         				
+									
+			         			</td>
+				              	<td>
+				              		0.0元
+				              		
+				              	</td>
+				              	<td>
+				              		
+				              	</td>
+				              	<td>
+				              		
+				              			<a class="BL" href="#" title="删除会员卡" style="cursor: pointer;" onClick="delCard('220924171')"><span class="tag bg-dot">删除卡</span></a>
+				              		
+				              		
+				              	</td>
+				            <tr>
+			            	
+			            	</table>
+		            	
+	              	</td>
+	              
+	              	<td align="center">2次</td>
+	              	<td align="center"><input style="border:1px solid #CCCCCC" type="text" size="4" readonly="readonly" value="0分"/></td>
+	              	<td align="center">Sat Mar 12 00:00:00 CST 2016&nbsp;</td>
+	             	
+			</tr>
+			
+            <tr>
+              	<td height=30><input type="checkbox" name="cb" value="42130946"></td>
+              	<td>
+    				<a class="BL" href="#" title="点击修改会员资料" style="cursor: pointer;" onClick="editmember('42130946',131071);">13480077768&nbsp;</a>
+              	</td>
+              	<td><span class="color">吴玉兰</span></td>
+              	
+              		
+              			<td>女</td>  
+              		
+              		
+              	
+              	<td>
+              		
+              			
+              		
+              			
+              		
+              			
+              		
+              	</td>      
+              	<td>
+              		Sat Mar 12 00:00:00 CST 2016
+			  	</td>
+	              	<td colspan="10" class="subtable">
+	              		
+	              			<table class="table">
+		              		
+		              		<tr id="cardtr220916741">
+			            		<td><a class="BL" href="#" title="点击修改会员资料" style="cursor: pointer;" onClick="$.dialog('/shair/memberArchives!editMember.action?id=220916741&shopid=131071&flag=1&ts='+new Date().getTime(),'80%',true,true)">80000150</a></td>
+			            		<td>白金卡</td>
+			            		<td>
+			            			
+			            				
+			            				
+										储值卡
+										
+										
+										
+									
+			            		</td>
+			            		<td>
+			            			10
+			            		</td>
+				              	<td>100.0元</td>
+				              	<td>0.0元</td>
+				              	<td>
+			         				100.0元
+			         				
+									
+			         			</td>
+				              	<td>
+				              		0.0元
+				              		
+				              	</td>
+				              	<td>
+				              		
+				              	</td>
+				              	<td>
+				              		
+				              			<a class="BL" href="#" title="删除会员卡" style="cursor: pointer;" onClick="delCard('220916741')"><span class="tag bg-dot">删除卡</span></a>
+				              		
+				              		
+				              	</td>
+				            <tr>
+			            	
+			            	</table>
+		            	
+	              	</td>
+	              
+	              	<td align="center">0次</td>
+	              	<td align="center"><input style="border:1px solid #CCCCCC" type="text" size="4" readonly="readonly" value="0分"/></td>
+	              	<td align="center">&nbsp;</td>
+	             	
+			</tr>
+			
+            <tr>
+              	<td height=30><input type="checkbox" name="cb" value="42117416"></td>
+              	<td>
+    				<a class="BL" href="#" title="点击修改会员资料" style="cursor: pointer;" onClick="editmember('42117416',131071);">15916915651&nbsp;</a>
+              	</td>
+              	<td><span class="color">丘广海</span></td>
+              	
+              		
+              		
+              			<td>男</td>  
+              		
+              	
+              	<td>
+              		
+              			
+              		
+              			
+              		
+              			
+              		
+              	</td>      
+              	<td>
+              		Fri Mar 11 00:00:00 CST 2016
+			  	</td>
+	              	<td colspan="10" class="subtable">
+	              		
+	              			<table class="table">
+		              		
+		              		<tr id="cardtr220903128">
+			            		<td><a class="BL" href="#" title="点击修改会员资料" style="cursor: pointer;" onClick="$.dialog('/shair/memberArchives!editMember.action?id=220903128&shopid=131071&flag=1&ts='+new Date().getTime(),'80%',true,true)">80000149</a></td>
+			            		<td>白金卡</td>
+			            		<td>
+			            			
+			            				
+			            				
+										储值卡
+										
+										
+										
+									
+			            		</td>
+			            		<td>
+			            			10
+			            		</td>
+				              	<td>200.0元</td>
+				              	<td>130.0元</td>
+				              	<td>
+			         				70.0元
+			         				
+									
+			         			</td>
+				              	<td>
+				              		10.0元
+				              		
+				              	</td>
+				              	<td>
+				              		
+				              	</td>
+				              	<td>
+				              		
+				              			<a class="BL" href="#" title="删除会员卡" style="cursor: pointer;" onClick="delCard('220903128')"><span class="tag bg-dot">删除卡</span></a>
+				              		
+				              		
+				              	</td>
+				            <tr>
+			            	
+			            	</table>
+		            	
+	              	</td>
+	              
+	              	<td align="center">1次</td>
+	              	<td align="center"><input style="border:1px solid #CCCCCC" type="text" size="4" readonly="readonly" value="0分"/></td>
+	              	<td align="center">Fri Mar 11 00:00:00 CST 2016&nbsp;</td>
+	             	
+			</tr>
+			
+            <tr>
+              	<td height=30><input type="checkbox" name="cb" value="42111827"></td>
+              	<td>
+    				<a class="BL" href="#" title="点击修改会员资料" style="cursor: pointer;" onClick="editmember('42111827',131071);">15876939075&nbsp;</a>
+              	</td>
+              	<td><span class="color">何玲云</span></td>
+              	
+              		
+              			<td>女</td>  
+              		
+              		
+              	
+              	<td>
+              		
+              			
+              		
+              			
+              		
+              			
+              		
+              	</td>      
+              	<td>
+              		Fri Mar 11 00:00:00 CST 2016
+			  	</td>
+	              	<td colspan="10" class="subtable">
+	              		
+	              			<table class="table">
+		              		
+		              		<tr id="cardtr220897507">
+			            		<td><a class="BL" href="#" title="点击修改会员资料" style="cursor: pointer;" onClick="$.dialog('/shair/memberArchives!editMember.action?id=220897507&shopid=131071&flag=1&ts='+new Date().getTime(),'80%',true,true)">80000148</a></td>
+			            		<td>白金卡</td>
+			            		<td>
+			            			
+			            				
+			            				
+										储值卡
+										
+										
+										
+									
+			            		</td>
+			            		<td>
+			            			10
+			            		</td>
+				              	<td>100.0元</td>
+				              	<td>0.0元</td>
+				              	<td>
+			         				100.0元
+			         				
+									
+			         			</td>
+				              	<td>
+				              		0.0元
+				              		
+				              	</td>
+				              	<td>
+				              		
+				              	</td>
+				              	<td>
+				              		
+				              			<a class="BL" href="#" title="删除会员卡" style="cursor: pointer;" onClick="delCard('220897507')"><span class="tag bg-dot">删除卡</span></a>
+				              		
+				              		
+				              	</td>
+				            <tr>
+			            	
+			            	</table>
+		            	
+	              	</td>
+	              
+	              	<td align="center">0次</td>
+	              	<td align="center"><input style="border:1px solid #CCCCCC" type="text" size="4" readonly="readonly" value="0分"/></td>
+	              	<td align="center">&nbsp;</td>
+	             	
+			</tr>
+			
+            <tr>
+              	<td height=30><input type="checkbox" name="cb" value="42094290"></td>
+              	<td>
+    				<a class="BL" href="#" title="点击修改会员资料" style="cursor: pointer;" onClick="editmember('42094290',131071);">13809274677&nbsp;</a>
+              	</td>
+              	<td><span class="color">谢建明</span></td>
+              	
+              		
+              			<td>女</td>  
+              		
+              		
+              	
+              	<td>
+              		
+              			
+              		
+              			
+              		
+              			
+              		
+              	</td>      
+              	<td>
+              		Thu Mar 10 00:00:00 CST 2016
+			  	</td>
+	              	<td colspan="10" class="subtable">
+	              		
+	              			<table class="table">
+		              		
+		              		<tr id="cardtr220879888">
+			            		<td><a class="BL" href="#" title="点击修改会员资料" style="cursor: pointer;" onClick="$.dialog('/shair/memberArchives!editMember.action?id=220879888&shopid=131071&flag=1&ts='+new Date().getTime(),'80%',true,true)">80000147</a></td>
+			            		<td>白金卡</td>
+			            		<td>
+			            			
+			            				
+			            				
+										储值卡
+										
+										
+										
+									
+			            		</td>
+			            		<td>
+			            			10
+			            		</td>
+				              	<td>300.0元</td>
+				              	<td>72.0元</td>
+				              	<td>
+			         				228.0元
+			         				
+									
+			         			</td>
+				              	<td>
+				              		0.0元
+				              		
+				              	</td>
+				              	<td>
+				              		
+				              	</td>
+				              	<td>
+				              		
+				              			<a class="BL" href="#" title="删除会员卡" style="cursor: pointer;" onClick="delCard('220879888')"><span class="tag bg-dot">删除卡</span></a>
+				              		
+				              		
+				              	</td>
+				            <tr>
+			            	
+			            	</table>
+		            	
+	              	</td>
+	              
+	              	<td align="center">2次</td>
+	              	<td align="center"><input style="border:1px solid #CCCCCC" type="text" size="4" readonly="readonly" value="0分"/></td>
+	              	<td align="center">Thu Mar 10 00:00:00 CST 2016&nbsp;</td>
+	             	
+			</tr>
+			
+            <tr>
+              	<td height=30><input type="checkbox" name="cb" value="42079915"></td>
+              	<td>
+    				<a class="BL" href="#" title="点击修改会员资料" style="cursor: pointer;" onClick="editmember('42079915',131071);">13712085752&nbsp;</a>
+              	</td>
+              	<td><span class="color">李细兰</span></td>
+              	
+              		
+              			<td>女</td>  
+              		
+              		
+              	
+              	<td>
+              		
+              			
+              		
+              			
+              		
+              			
+              		
+              	</td>      
+              	<td>
+              		Wed Mar 09 00:00:00 CST 2016
+			  	</td>
+	              	<td colspan="10" class="subtable">
+	              		
+	              			<table class="table">
+		              		
+		              		<tr id="cardtr220865451">
+			            		<td><a class="BL" href="#" title="点击修改会员资料" style="cursor: pointer;" onClick="$.dialog('/shair/memberArchives!editMember.action?id=220865451&shopid=131071&flag=1&ts='+new Date().getTime(),'80%',true,true)">80000146</a></td>
+			            		<td>白金卡</td>
+			            		<td>
+			            			
+			            				
+			            				
+										储值卡
+										
+										
+										
+									
+			            		</td>
+			            		<td>
+			            			10
+			            		</td>
+				              	<td>300.0元</td>
+				              	<td>62.0元</td>
+				              	<td>
+			         				238.0元
+			         				
+									
+			         			</td>
+				              	<td>
+				              		0.0元
+				              		
+				              	</td>
+				              	<td>
+				              		
+				              	</td>
+				              	<td>
+				              		
+				              			<a class="BL" href="#" title="删除会员卡" style="cursor: pointer;" onClick="delCard('220865451')"><span class="tag bg-dot">删除卡</span></a>
+				              		
+				              		
+				              	</td>
+				            <tr>
+			            	
+			            	</table>
+		            	
+	              	</td>
+	              
+	              	<td align="center">2次</td>
+	              	<td align="center"><input style="border:1px solid #CCCCCC" type="text" size="4" readonly="readonly" value="0分"/></td>
+	              	<td align="center">Thu Mar 17 00:00:00 CST 2016&nbsp;</td>
+	             	
+			</tr>
+			
+            <tr>
+              	<td height=30><input type="checkbox" name="cb" value="42078969"></td>
+              	<td>
+    				<a class="BL" href="#" title="点击修改会员资料" style="cursor: pointer;" onClick="editmember('42078969',131071);">18666436907&nbsp;</a>
+              	</td>
+              	<td><span class="color">陈加华</span></td>
+              	
+              		
+              		
+              			<td>男</td>  
+              		
+              	
+              	<td>
+              		
+              			
+              		
+              			
+              		
+              			
+              		
+              	</td>      
+              	<td>
+              		Wed Mar 09 00:00:00 CST 2016
+			  	</td>
+	              	<td colspan="10" class="subtable">
+	              		
+	              			<table class="table">
+		              		
+		              		<tr id="cardtr220864495">
+			            		<td><a class="BL" href="#" title="点击修改会员资料" style="cursor: pointer;" onClick="$.dialog('/shair/memberArchives!editMember.action?id=220864495&shopid=131071&flag=1&ts='+new Date().getTime(),'80%',true,true)">800000145</a></td>
+			            		<td>贵宾卡</td>
+			            		<td>
+			            			
+			            				
+			            				
+										储值卡
+										
+										
+										
+									
+			            		</td>
+			            		<td>
+			            			10
+			            		</td>
+				              	<td>200.0元</td>
+				              	<td>49.0元</td>
+				              	<td>
+			         				151.0元
+			         				
+									
+			         			</td>
+				              	<td>
+				              		10.0元
+				              		
+				              	</td>
+				              	<td>
+				              		
+				              	</td>
+				              	<td>
+				              		
+				              			<a class="BL" href="#" title="删除会员卡" style="cursor: pointer;" onClick="delCard('220864495')"><span class="tag bg-dot">删除卡</span></a>
+				              		
+				              		
+				              	</td>
+				            <tr>
+			            	
+			            	</table>
+		            	
+	              	</td>
+	              
+	              	<td align="center">1次</td>
+	              	<td align="center"><input style="border:1px solid #CCCCCC" type="text" size="4" readonly="readonly" value="0分"/></td>
+	              	<td align="center">Wed Mar 09 00:00:00 CST 2016&nbsp;</td>
+	             	
+			</tr>
+			
+            <tr>
+              	<td height=30><input type="checkbox" name="cb" value="41986564"></td>
+              	<td>
+    				<a class="BL" href="#" title="点击修改会员资料" style="cursor: pointer;" onClick="editmember('41986564',131071);">18824527772&nbsp;</a>
+              	</td>
+              	<td><span class="color">冯倩</span></td>
+              	
+              		
+              			<td>女</td>  
+              		
+              		
+              	
+              	<td>
+              		
+              			
+              		
+              			
+              		
+              			
+              		
+              	</td>      
+              	<td>
+              		Sun Mar 06 00:00:00 CST 2016
+			  	</td>
+	              	<td colspan="10" class="subtable">
+	              		
+	              			<table class="table">
+		              		
+		              		<tr id="cardtr220771834">
+			            		<td><a class="BL" href="#" title="点击修改会员资料" style="cursor: pointer;" onClick="$.dialog('/shair/memberArchives!editMember.action?id=220771834&shopid=131071&flag=1&ts='+new Date().getTime(),'80%',true,true)">8000080144</a></td>
+			            		<td>白金卡</td>
+			            		<td>
+			            			
+			            				
+			            				
+										储值卡
+										
+										
+										
+									
+			            		</td>
+			            		<td>
+			            			10
+			            		</td>
+				              	<td>200.0元</td>
+				              	<td>49.0元</td>
+				              	<td>
+			         				151.0元
+			         				
+									
+			         			</td>
+				              	<td>
+				              		0.0元
+				              		
+				              	</td>
+				              	<td>
+				              		
+				              	</td>
+				              	<td>
+				              		
+				              			<a class="BL" href="#" title="删除会员卡" style="cursor: pointer;" onClick="delCard('220771834')"><span class="tag bg-dot">删除卡</span></a>
+				              		
+				              		
+				              	</td>
+				            <tr>
+			            	
+			            	</table>
+		            	
+	              	</td>
+	              
+	              	<td align="center">1次</td>
+	              	<td align="center"><input style="border:1px solid #CCCCCC" type="text" size="4" readonly="readonly" value="0分"/></td>
+	              	<td align="center">Sun Mar 06 00:00:00 CST 2016&nbsp;</td>
+	             	
+			</tr>
+			
+            <tr>
+              	<td height=30><input type="checkbox" name="cb" value="41915665"></td>
+              	<td>
+    				<a class="BL" href="#" title="点击修改会员资料" style="cursor: pointer;" onClick="editmember('41915665',131071);">18258862626&nbsp;</a>
+              	</td>
+              	<td><span class="color">陈宁</span></td>
+              	
+              		
+              		
+              			<td>男</td>  
+              		
+              	
+              	<td>
+              		
+              			
+              		
+              			
+              		
+              			
+              		
+              	</td>      
+              	<td>
+              		Tue Mar 01 00:00:00 CST 2016
+			  	</td>
+	              	<td colspan="10" class="subtable">
+	              		
+	              			<table class="table">
+		              		
+		              		<tr id="cardtr220700686">
+			            		<td><a class="BL" href="#" title="点击修改会员资料" style="cursor: pointer;" onClick="$.dialog('/shair/memberArchives!editMember.action?id=220700686&shopid=131071&flag=1&ts='+new Date().getTime(),'80%',true,true)">8000080143</a></td>
+			            		<td>白金卡</td>
+			            		<td>
+			            			
+			            				
+			            				
+										储值卡
+										
+										
+										
+									
+			            		</td>
+			            		<td>
+			            			10
+			            		</td>
+				              	<td>200.0元</td>
+				              	<td>78.0元</td>
+				              	<td>
+			         				122.0元
+			         				
+									
+			         			</td>
+				              	<td>
+				              		0.0元
+				              		
+				              	</td>
+				              	<td>
+				              		
+				              	</td>
+				              	<td>
+				              		
+				              			<a class="BL" href="#" title="删除会员卡" style="cursor: pointer;" onClick="delCard('220700686')"><span class="tag bg-dot">删除卡</span></a>
+				              		
+				              		
+				              	</td>
+				            <tr>
+			            	
+			            	</table>
+		            	
+	              	</td>
+	              
+	              	<td align="center">3次</td>
+	              	<td align="center"><input style="border:1px solid #CCCCCC" type="text" size="4" readonly="readonly" value="0分"/></td>
+	              	<td align="center">Fri Mar 04 00:00:00 CST 2016&nbsp;</td>
+	             	
+			</tr>
+			
+            <tr>
+              	<td height=30><input type="checkbox" name="cb" value="41873371"></td>
+              	<td>
+    				<a class="BL" href="#" title="点击修改会员资料" style="cursor: pointer;" onClick="editmember('41873371',131071);">15820850864&nbsp;</a>
+              	</td>
+              	<td><span class="color">蒋姣丽</span></td>
+              	
+              		
+              			<td>女</td>  
+              		
+              		
+              	
+              	<td>
+              		
+              			
+              		
+              			
+              		
+              			
+              		
+              	</td>      
+              	<td>
+              		Sun Feb 28 00:00:00 CST 2016
+			  	</td>
+	              	<td colspan="10" class="subtable">
+	              		
+	              			<table class="table">
+		              		
+		              		<tr id="cardtr220658351">
+			            		<td><a class="BL" href="#" title="点击修改会员资料" style="cursor: pointer;" onClick="$.dialog('/shair/memberArchives!editMember.action?id=220658351&shopid=131071&flag=1&ts='+new Date().getTime(),'80%',true,true)">8000080142</a></td>
+			            		<td>白金卡</td>
+			            		<td>
+			            			
+			            				
+			            				
+										储值卡
+										
+										
+										
+									
+			            		</td>
+			            		<td>
+			            			10
+			            		</td>
+				              	<td>600.0元</td>
+				              	<td>521.0元</td>
+				              	<td>
+			         				79.0元
+			         				
+									
+			         			</td>
+				              	<td>
+				              		0.0元
+				              		
+				              	</td>
+				              	<td>
+				              		
+				              	</td>
+				              	<td>
+				              		
+				              			<a class="BL" href="#" title="删除会员卡" style="cursor: pointer;" onClick="delCard('220658351')"><span class="tag bg-dot">删除卡</span></a>
+				              		
+				              		
+				              	</td>
+				            <tr>
+			            	
+			            	</table>
+		            	
+	              	</td>
+	              
+	              	<td align="center">2次</td>
+	              	<td align="center"><input style="border:1px solid #CCCCCC" type="text" size="4" readonly="readonly" value="0分"/></td>
+	              	<td align="center">Tue Mar 01 00:00:00 CST 2016&nbsp;</td>
+	             	
+			</tr>
+			
+            <tr>
+              	<td height=30><input type="checkbox" name="cb" value="41869822"></td>
+              	<td>
+    				<a class="BL" href="#" title="点击修改会员资料" style="cursor: pointer;" onClick="editmember('41869822',131071);">18926801098&nbsp;</a>
+              	</td>
+              	<td><span class="color">赖晓东</span></td>
+              	
+              		
+              		
+              			<td>男</td>  
+              		
+              	
+              	<td>
+              		
+              			
+              		
+              			
+              		
+              			
+              		
+              	</td>      
+              	<td>
+              		Sun Feb 28 00:00:00 CST 2016
+			  	</td>
+	              	<td colspan="10" class="subtable">
+	              		
+	              			<table class="table">
+		              		
+		              		<tr id="cardtr220654797">
+			            		<td><a class="BL" href="#" title="点击修改会员资料" style="cursor: pointer;" onClick="$.dialog('/shair/memberArchives!editMember.action?id=220654797&shopid=131071&flag=1&ts='+new Date().getTime(),'80%',true,true)">8000080141</a></td>
+			            		<td>白金卡</td>
+			            		<td>
+			            			
+			            				
+			            				
+										储值卡
+										
+										
+										
+									
+			            		</td>
+			            		<td>
+			            			10
+			            		</td>
+				              	<td>200.0元</td>
+				              	<td>62.0元</td>
+				              	<td>
+			         				138.0元
+			         				
+									
+			         			</td>
+				              	<td>
+				              		0.0元
+				              		
+				              	</td>
+				              	<td>
+				              		
+				              	</td>
+				              	<td>
+				              		
+				              			<a class="BL" href="#" title="删除会员卡" style="cursor: pointer;" onClick="delCard('220654797')"><span class="tag bg-dot">删除卡</span></a>
+				              		
+				              		
+				              	</td>
+				            <tr>
+			            	
+			            	</table>
+		            	
+	              	</td>
+	              
+	              	<td align="center">2次</td>
+	              	<td align="center"><input style="border:1px solid #CCCCCC" type="text" size="4" readonly="readonly" value="0分"/></td>
+	              	<td align="center">Sun Mar 13 00:00:00 CST 2016&nbsp;</td>
+	             	
+			</tr>
+			
+            <tr>
+              	<td height=30><input type="checkbox" name="cb" value="41856586"></td>
+              	<td>
+    				<a class="BL" href="#" title="点击修改会员资料" style="cursor: pointer;" onClick="editmember('41856586',131071);">13763209525&nbsp;</a>
+              	</td>
+              	<td><span class="color">何明华</span></td>
+              	
+              		
+              			<td>女</td>  
+              		
+              		
+              	
+              	<td>
+              		
+              			
+              		
+              			
+              		
+              			
+              		
+              	</td>      
+              	<td>
+              		Sat Feb 27 00:00:00 CST 2016
+			  	</td>
+	              	<td colspan="10" class="subtable">
+	              		
+	              			<table class="table">
+		              		
+		              		<tr id="cardtr220641522">
+			            		<td><a class="BL" href="#" title="点击修改会员资料" style="cursor: pointer;" onClick="$.dialog('/shair/memberArchives!editMember.action?id=220641522&shopid=131071&flag=1&ts='+new Date().getTime(),'80%',true,true)">8000080140</a></td>
+			            		<td>白金卡</td>
+			            		<td>
+			            			
+			            				
+			            				
+										储值卡
+										
+										
+										
+									
+			            		</td>
+			            		<td>
+			            			10
+			            		</td>
+				              	<td>300.0元</td>
+				              	<td>57.0元</td>
+				              	<td>
+			         				243.0元
+			         				
+									
+			         			</td>
+				              	<td>
+				              		0.0元
+				              		
+				              	</td>
+				              	<td>
+				              		
+				              	</td>
+				              	<td>
+				              		
+				              			<a class="BL" href="#" title="删除会员卡" style="cursor: pointer;" onClick="delCard('220641522')"><span class="tag bg-dot">删除卡</span></a>
+				              		
+				              		
+				              	</td>
+				            <tr>
+			            	
+			            	</table>
+		            	
+	              	</td>
+	              
+	              	<td align="center">2次</td>
+	              	<td align="center"><input style="border:1px solid #CCCCCC" type="text" size="4" readonly="readonly" value="0分"/></td>
+	              	<td align="center">Sat Feb 27 00:00:00 CST 2016&nbsp;</td>
+	             	
+			</tr>
+			
+            <tr>
+              	<td height=30><input type="checkbox" name="cb" value="41776218"></td>
+              	<td>
+    				<a class="BL" href="#" title="点击修改会员资料" style="cursor: pointer;" onClick="editmember('41776218',131071);">15999820131&nbsp;</a>
+              	</td>
+              	<td><span class="color">曹丽娟</span></td>
+              	
+              		
+              			<td>女</td>  
+              		
+              		
+              	
+              	<td>
+              		
+              			
+              		
+              			
+              		
+              			
+              		
+              	</td>      
+              	<td>
+              		Sun Feb 21 00:00:00 CST 2016
+			  	</td>
+	              	<td colspan="10" class="subtable">
+	              		
+	              			<table class="table">
+		              		
+		              		<tr id="cardtr220560945">
+			            		<td><a class="BL" href="#" title="点击修改会员资料" style="cursor: pointer;" onClick="$.dialog('/shair/memberArchives!editMember.action?id=220560945&shopid=131071&flag=1&ts='+new Date().getTime(),'80%',true,true)">8000080139</a></td>
+			            		<td>白金卡</td>
+			            		<td>
+			            			
+			            				
+			            				
+										储值卡
+										
+										
+										
+									
+			            		</td>
+			            		<td>
+			            			10
+			            		</td>
+				              	<td>300.0元</td>
+				              	<td>315.0元</td>
+				              	<td>
+			         				0.0元
+			         				
+									
+			         			</td>
+				              	<td>
+				              		0.0元
+				              		
+				              	</td>
+				              	<td>
+				              		
+				              	</td>
+				              	<td>
+				              		
+				              			<a class="BL" href="#" title="删除会员卡" style="cursor: pointer;" onClick="delCard('220560945')"><span class="tag bg-dot">删除卡</span></a>
+				              		
+				              		
+				              	</td>
+				            <tr>
+			            	
+			            	</table>
+		            	
+	              	</td>
+	              
+	              	<td align="center">3次</td>
+	              	<td align="center"><input style="border:1px solid #CCCCCC" type="text" size="4" readonly="readonly" value="0分"/></td>
+	              	<td align="center">Tue Mar 15 00:00:00 CST 2016&nbsp;</td>
+	             	
+			</tr>
+			
+            <tr>
+              	<td height=30><input type="checkbox" name="cb" value="41758580"></td>
+              	<td>
+    				<a class="BL" href="#" title="点击修改会员资料" style="cursor: pointer;" onClick="editmember('41758580',131071);">13927070035&nbsp;</a>
+              	</td>
+              	<td><span class="color1">刘延勤</span></td>
+              	
+              		
+              			<td>女</td>  
+              		
+              		
+              	
+              	<td>
+              		
+              			
+              		
+              			
+              		
+              			
+              		
+              	</td>      
+              	<td>
+              		Sat Feb 20 00:00:00 CST 2016
+			  	</td>
+	              	<td colspan="10" class="subtable">
+	              		
+	              			<table class="table">
+		              		
+		              		<tr id="cardtr220543256">
+			            		<td><a class="BL" href="#" title="点击修改会员资料" style="cursor: pointer;" onClick="$.dialog('/shair/memberArchives!editMember.action?id=220543256&shopid=131071&flag=1&ts='+new Date().getTime(),'80%',true,true)">8000080138</a></td>
+			            		<td>白金卡</td>
+			            		<td>
+			            			
+			            				
+			            				
+										储值卡
+										
+										
+										
+									
+			            		</td>
+			            		<td>
+			            			10
+			            		</td>
+				              	<td>200.0元</td>
+				              	<td>57.0元</td>
+				              	<td>
+			         				143.0元
+			         				
+									
+			         			</td>
+				              	<td>
+				              		0.0元
+				              		
+				              	</td>
+				              	<td>
+				              		
+				              	</td>
+				              	<td>
+				              		
+				              			<a class="BL" href="#" title="删除会员卡" style="cursor: pointer;" onClick="delCard('220543256')"><span class="tag bg-dot">删除卡</span></a>
+				              		
+				              		
+				              	</td>
+				            <tr>
+			            	
+			            	</table>
+		            	
+	              	</td>
+	              
+	              	<td align="center">2次</td>
+	              	<td align="center"><input style="border:1px solid #CCCCCC" type="text" size="4" readonly="readonly" value="0分"/></td>
+	              	<td align="center">Sat Feb 20 00:00:00 CST 2016&nbsp;</td>
+	             	
+			</tr>
+			
+            <tr>
+              	<td height=30><input type="checkbox" name="cb" value="41735772"></td>
+              	<td>
+    				<a class="BL" href="#" title="点击修改会员资料" style="cursor: pointer;" onClick="editmember('41735772',131071);">18665149686&nbsp;</a>
+              	</td>
+              	<td><span class="color">张萌</span></td>
+              	
+              		
+              			<td>女</td>  
+              		
+              		
+              	
+              	<td>
+              		
+              			
+              		
+              			
+              		
+              			
+              		
+              	</td>      
+              	<td>
+              		Thu Feb 18 00:00:00 CST 2016
+			  	</td>
+	              	<td colspan="10" class="subtable">
+	              		
+	              			<table class="table">
+		              		
+		              		<tr id="cardtr220520377">
+			            		<td><a class="BL" href="#" title="点击修改会员资料" style="cursor: pointer;" onClick="$.dialog('/shair/memberArchives!editMember.action?id=220520377&shopid=131071&flag=1&ts='+new Date().getTime(),'80%',true,true)">8000080137</a></td>
+			            		<td>白金卡</td>
+			            		<td>
+			            			
+			            				
+			            				
+										储值卡
+										
+										
+										
+									
+			            		</td>
+			            		<td>
+			            			10
+			            		</td>
+				              	<td>200.0元</td>
+				              	<td>119.0元</td>
+				              	<td>
+			         				81.0元
+			         				
+									
+			         			</td>
+				              	<td>
+				              		0.0元
+				              		
+				              	</td>
+				              	<td>
+				              		
+				              	</td>
+				              	<td>
+				              		
+				              			<a class="BL" href="#" title="删除会员卡" style="cursor: pointer;" onClick="delCard('220520377')"><span class="tag bg-dot">删除卡</span></a>
+				              		
+				              		
+				              	</td>
+				            <tr>
+			            	
+			            	</table>
+		            	
+	              	</td>
+	              
+	              	<td align="center">5次</td>
+	              	<td align="center"><input style="border:1px solid #CCCCCC" type="text" size="4" readonly="readonly" value="0分"/></td>
+	              	<td align="center">Mon Mar 14 00:00:00 CST 2016&nbsp;</td>
+	             	
+			</tr>
+			
+            <tr>
+              	<td height=30><input type="checkbox" name="cb" value="41686208"></td>
+              	<td>
+    				<a class="BL" href="#" title="点击修改会员资料" style="cursor: pointer;" onClick="editmember('41686208',131071);">15817536567&nbsp;</a>
+              	</td>
+              	<td><span class="color1">李静</span></td>
+              	
+              		
+              			<td>女</td>  
+              		
+              		
+              	
+              	<td>
+              		
+              			
+              		
+              			
+              		
+              			
+              		
+              	</td>      
+              	<td>
+              		Sat Feb 13 00:00:00 CST 2016
+			  	</td>
+	              	<td colspan="10" class="subtable">
+	              		
+	              			<table class="table">
+		              		
+		              		<tr id="cardtr220470730">
+			            		<td><a class="BL" href="#" title="点击修改会员资料" style="cursor: pointer;" onClick="$.dialog('/shair/memberArchives!editMember.action?id=220470730&shopid=131071&flag=1&ts='+new Date().getTime(),'80%',true,true)">8000080136</a></td>
+			            		<td>白金卡</td>
+			            		<td>
+			            			
+			            				
+			            				
+										储值卡
+										
+										
+										
+									
+			            		</td>
+			            		<td>
+			            			10
+			            		</td>
+				              	<td>300.0元</td>
+				              	<td>230.0元</td>
+				              	<td>
+			         				70.0元
+			         				
+									
+			         			</td>
+				              	<td>
+				              		0.0元
+				              		
+				              	</td>
+				              	<td>
+				              		
+				              	</td>
+				              	<td>
+				              		
+				              			<a class="BL" href="#" title="删除会员卡" style="cursor: pointer;" onClick="delCard('220470730')"><span class="tag bg-dot">删除卡</span></a>
+				              		
+				              		
+				              	</td>
+				            <tr>
+			            	
+			            	</table>
+		            	
+	              	</td>
+	              
+	              	<td align="center">1次</td>
+	              	<td align="center"><input style="border:1px solid #CCCCCC" type="text" size="4" readonly="readonly" value="0分"/></td>
+	              	<td align="center">Sat Feb 13 00:00:00 CST 2016&nbsp;</td>
+	             	
+			</tr>
+			
+            <tr>
+              	<td height=30><input type="checkbox" name="cb" value="41672409"></td>
+              	<td>
+    				<a class="BL" href="#" title="点击修改会员资料" style="cursor: pointer;" onClick="editmember('41672409',131071);">13790381018&nbsp;</a>
+              	</td>
+              	<td><span class="color">林飞苑</span></td>
+              	
+              		
+              			<td>女</td>  
+              		
+              		
+              	
+              	<td>
+              		
+              			
+              		
+              			
+              		
+              			
+              		
+              	</td>      
+              	<td>
+              		Mon Feb 08 00:00:00 CST 2016
+			  	</td>
+	              	<td colspan="10" class="subtable">
+	              		
+	              			<table class="table">
+		              		
+		              		<tr id="cardtr220456924">
+			            		<td><a class="BL" href="#" title="点击修改会员资料" style="cursor: pointer;" onClick="$.dialog('/shair/memberArchives!editMember.action?id=220456924&shopid=131071&flag=1&ts='+new Date().getTime(),'80%',true,true)">8000080135</a></td>
+			            		<td>白金卡</td>
+			            		<td>
+			            			
+			            				
+			            				
+										储值卡
+										
+										
+										
+									
+			            		</td>
+			            		<td>
+			            			10
+			            		</td>
+				              	<td>200.0元</td>
+				              	<td>98.0元</td>
+				              	<td>
+			         				102.0元
+			         				
+									
+			         			</td>
+				              	<td>
+				              		0.0元
+				              		
+				              	</td>
+				              	<td>
+				              		
+				              	</td>
+				              	<td>
+				              		
+				              			<a class="BL" href="#" title="删除会员卡" style="cursor: pointer;" onClick="delCard('220456924')"><span class="tag bg-dot">删除卡</span></a>
+				              		
+				              		
+				              	</td>
+				            <tr>
+			            	
+			            	</table>
+		            	
+	              	</td>
+	              
+	              	<td align="center">4次</td>
+	              	<td align="center"><input style="border:1px solid #CCCCCC" type="text" size="4" readonly="readonly" value="0分"/></td>
+	              	<td align="center">Sat Mar 05 00:00:00 CST 2016&nbsp;</td>
+	             	
+			</tr>
+			
+            <tr>
+              	<td height=30><input type="checkbox" name="cb" value="41660796"></td>
+              	<td>
+    				<a class="BL" href="#" title="点击修改会员资料" style="cursor: pointer;" onClick="editmember('41660796',131071);">18371099819&nbsp;</a>
+              	</td>
+              	<td><span class="color">何敏静</span></td>
+              	
+              		
+              			<td>女</td>  
+              		
+              		
+              	
+              	<td>
+              		
+              			
+              		
+              			
+              		
+              			
+              		
+              	</td>      
+              	<td>
+              		Fri Feb 05 00:00:00 CST 2016
+			  	</td>
+	              	<td colspan="10" class="subtable">
+	              		
+	              			<table class="table">
+		              		
+		              		<tr id="cardtr220445297">
+			            		<td><a class="BL" href="#" title="点击修改会员资料" style="cursor: pointer;" onClick="$.dialog('/shair/memberArchives!editMember.action?id=220445297&shopid=131071&flag=1&ts='+new Date().getTime(),'80%',true,true)">8000080134</a></td>
+			            		<td>白金卡</td>
+			            		<td>
+			            			
+			            				
+			            				
+										储值卡
+										
+										
+										
+									
+			            		</td>
+			            		<td>
+			            			10
+			            		</td>
+				              	<td>300.0元</td>
+				              	<td>266.0元</td>
+				              	<td>
+			         				34.0元
+			         				
+									
+			         			</td>
+				              	<td>
+				              		0.0元
+				              		
+				              	</td>
+				              	<td>
+				              		
+				              	</td>
+				              	<td>
+				              		
+				              			<a class="BL" href="#" title="删除会员卡" style="cursor: pointer;" onClick="delCard('220445297')"><span class="tag bg-dot">删除卡</span></a>
+				              		
+				              		
+				              	</td>
+				            <tr>
+			            	
+			            	</table>
+		            	
+	              	</td>
+	              
+	              	<td align="center">4次</td>
+	              	<td align="center"><input style="border:1px solid #CCCCCC" type="text" size="4" readonly="readonly" value="0分"/></td>
+	              	<td align="center">Sat Mar 12 00:00:00 CST 2016&nbsp;</td>
+	             	
+			</tr>
+			
+            <tr>
+              	<td height=30><input type="checkbox" name="cb" value="41658135"></td>
+              	<td>
+    				<a class="BL" href="#" title="点击修改会员资料" style="cursor: pointer;" onClick="editmember('41658135',131071);">15019045668&nbsp;</a>
+              	</td>
+              	<td><span class="color">刘梦珊</span></td>
+              	
+              		
+              			<td>女</td>  
+              		
+              		
+              	
+              	<td>
+              		
+              			
+              		
+              			
+              		
+              			
+              		
+              	</td>      
+              	<td>
+              		Fri Feb 05 00:00:00 CST 2016
+			  	</td>
+	              	<td colspan="10" class="subtable">
+	              		
+	              			<table class="table">
+		              		
+		              		<tr id="cardtr220442623">
+			            		<td><a class="BL" href="#" title="点击修改会员资料" style="cursor: pointer;" onClick="$.dialog('/shair/memberArchives!editMember.action?id=220442623&shopid=131071&flag=1&ts='+new Date().getTime(),'80%',true,true)">8000080133</a></td>
+			            		<td>白金卡</td>
+			            		<td>
+			            			
+			            				
+			            				
+										储值卡
+										
+										
+										
+									
+			            		</td>
+			            		<td>
+			            			10
+			            		</td>
+				              	<td>200.0元</td>
+				              	<td>92.0元</td>
+				              	<td>
+			         				108.0元
+			         				
+									
+			         			</td>
+				              	<td>
+				              		0.0元
+				              		
+				              	</td>
+				              	<td>
+				              		
+				              	</td>
+				              	<td>
+				              		
+				              			<a class="BL" href="#" title="删除会员卡" style="cursor: pointer;" onClick="delCard('220442623')"><span class="tag bg-dot">删除卡</span></a>
+				              		
+				              		
+				              	</td>
+				            <tr>
+			            	
+			            	</table>
+		            	
+	              	</td>
+	              
+	              	<td align="center">2次</td>
+	              	<td align="center"><input style="border:1px solid #CCCCCC" type="text" size="4" readonly="readonly" value="0分"/></td>
+	              	<td align="center">Fri Mar 04 00:00:00 CST 2016&nbsp;</td>
+	             	
+			</tr>
+			
+            <tr>
+              	<td height=30><input type="checkbox" name="cb" value="41570674"></td>
+              	<td>
+    				<a class="BL" href="#" title="点击修改会员资料" style="cursor: pointer;" onClick="editmember('41570674',131071);">13058586883&nbsp;</a>
+              	</td>
+              	<td><span class="color">婷婷</span></td>
+              	
+              		
+              			<td>女</td>  
+              		
+              		
+              	
+              	<td>
+              		
+              			
+              		
+              			
+              		
+              			
+              		
+              	</td>      
+              	<td>
+              		Sun Jan 31 00:00:00 CST 2016
+			  	</td>
+	              	<td colspan="10" class="subtable">
+	              		
+	              			<table class="table">
+		              		
+		              		<tr id="cardtr220354899">
+			            		<td><a class="BL" href="#" title="点击修改会员资料" style="cursor: pointer;" onClick="$.dialog('/shair/memberArchives!editMember.action?id=220354899&shopid=131071&flag=1&ts='+new Date().getTime(),'80%',true,true)">800000132</a></td>
+			            		<td>白金卡</td>
+			            		<td>
+			            			
+			            				
+			            				
+										储值卡
+										
+										
+										
+									
+			            		</td>
+			            		<td>
+			            			10
+			            		</td>
+				              	<td>400.0元</td>
+				              	<td>362.0元</td>
+				              	<td>
+			         				38.0元
+			         				
+									
+			         			</td>
+				              	<td>
+				              		0.0元
+				              		
+				              	</td>
+				              	<td>
+				              		
+				              	</td>
+				              	<td>
+				              		
+				              			<a class="BL" href="#" title="删除会员卡" style="cursor: pointer;" onClick="delCard('220354899')"><span class="tag bg-dot">删除卡</span></a>
+				              		
+				              		
+				              	</td>
+				            <tr>
+			            	
+			            	</table>
+		            	
+	              	</td>
+	              
+	              	<td align="center">4次</td>
+	              	<td align="center"><input style="border:1px solid #CCCCCC" type="text" size="4" readonly="readonly" value="0分"/></td>
+	              	<td align="center">Tue Mar 15 00:00:00 CST 2016&nbsp;</td>
+	             	
+			</tr>
+			
+            <tr>
+              	<td height=30><input type="checkbox" name="cb" value="41539332"></td>
+              	<td>
+    				<a class="BL" href="#" title="点击修改会员资料" style="cursor: pointer;" onClick="editmember('41539332',131071);">13728212233&nbsp;</a>
+              	</td>
+              	<td><span class="color1">邬曼贤</span></td>
+              	
+              		
+              			<td>女</td>  
+              		
+              		
+              	
+              	<td>
+              		
+              			
+              		
+              			
+              		
+              			
+              		
+              	</td>      
+              	<td>
+              		Sat Jan 30 00:00:00 CST 2016
+			  	</td>
+	              	<td colspan="10" class="subtable">
+	              		
+	              			<table class="table">
+		              		
+		              		<tr id="cardtr220323442">
+			            		<td><a class="BL" href="#" title="点击修改会员资料" style="cursor: pointer;" onClick="$.dialog('/shair/memberArchives!editMember.action?id=220323442&shopid=131071&flag=1&ts='+new Date().getTime(),'80%',true,true)">80000131</a></td>
+			            		<td>白金卡</td>
+			            		<td>
+			            			
+			            				
+			            				
+										储值卡
+										
+										
+										
+									
+			            		</td>
+			            		<td>
+			            			10
+			            		</td>
+				              	<td>300.0元</td>
+				              	<td>112.0元</td>
+				              	<td>
+			         				188.0元
+			         				
+									
+			         			</td>
+				              	<td>
+				              		70.0元
+				              		
+				              	</td>
+				              	<td>
+				              		
+				              	</td>
+				              	<td>
+				              		
+				              			<a class="BL" href="#" title="删除会员卡" style="cursor: pointer;" onClick="delCard('220323442')"><span class="tag bg-dot">删除卡</span></a>
+				              		
+				              		
+				              	</td>
+				            <tr>
+			            	
+			            	</table>
+		            	
+	              	</td>
+	              
+	              	<td align="center">2次</td>
+	              	<td align="center"><input style="border:1px solid #CCCCCC" type="text" size="4" readonly="readonly" value="0分"/></td>
+	              	<td align="center">Sat Jan 30 00:00:00 CST 2016&nbsp;</td>
+	             	
+			</tr>
+			
+            <tr>
+              	<td height=30><input type="checkbox" name="cb" value="41509894"></td>
+              	<td>
+    				<a class="BL" href="#" title="点击修改会员资料" style="cursor: pointer;" onClick="editmember('41509894',131071);">13602388664&nbsp;</a>
+              	</td>
+              	<td><span class="color1">徐欢</span></td>
+              	
+              		
+              			<td>女</td>  
+              		
+              		
+              	
+              	<td>
+              		
+              			
+              		
+              			
+              		
+              			
+              		
+              	</td>      
+              	<td>
+              		Fri Jan 29 00:00:00 CST 2016
+			  	</td>
+	              	<td colspan="10" class="subtable">
+	              		
+	              			<table class="table">
+		              		
+		              		<tr id="cardtr220293942">
+			            		<td><a class="BL" href="#" title="点击修改会员资料" style="cursor: pointer;" onClick="$.dialog('/shair/memberArchives!editMember.action?id=220293942&shopid=131071&flag=1&ts='+new Date().getTime(),'80%',true,true)">80000130</a></td>
+			            		<td>白金卡</td>
+			            		<td>
+			            			
+			            				
+			            				
+										储值卡
+										
+										
+										
+									
+			            		</td>
+			            		<td>
+			            			10
+			            		</td>
+				              	<td>400.0元</td>
+				              	<td>361.0元</td>
+				              	<td>
+			         				39.0元
+			         				
+									
+			         			</td>
+				              	<td>
+				              		0.0元
+				              		
+				              	</td>
+				              	<td>
+				              		
+				              	</td>
+				              	<td>
+				              		
+				              			<a class="BL" href="#" title="删除会员卡" style="cursor: pointer;" onClick="delCard('220293942')"><span class="tag bg-dot">删除卡</span></a>
+				              		
+				              		
+				              	</td>
+				            <tr>
+			            	
+			            	</table>
+		            	
+	              	</td>
+	              
+	              	<td align="center">2次</td>
+	              	<td align="center"><input style="border:1px solid #CCCCCC" type="text" size="4" readonly="readonly" value="0分"/></td>
+	              	<td align="center">Mon Feb 01 00:00:00 CST 2016&nbsp;</td>
+	             	
+			</tr>
+			
+            <tr>
+              	<td height=30><input type="checkbox" name="cb" value="41457261"></td>
+              	<td>
+    				<a class="BL" href="#" title="点击修改会员资料" style="cursor: pointer;" onClick="editmember('41457261',131071);">15019054327&nbsp;</a>
+              	</td>
+              	<td><span class="color">郭先芹</span></td>
+              	
+              		
+              			<td>女</td>  
+              		
+              		
+              	
+              	<td>
+              		
+              			
+              		
+              			
+              		
+              			
+              		
+              	</td>      
+              	<td>
+              		Wed Jan 27 00:00:00 CST 2016
+			  	</td>
+	              	<td colspan="10" class="subtable">
+	              		
+	              			<table class="table">
+		              		
+		              		<tr id="cardtr220241100">
+			            		<td><a class="BL" href="#" title="点击修改会员资料" style="cursor: pointer;" onClick="$.dialog('/shair/memberArchives!editMember.action?id=220241100&shopid=131071&flag=1&ts='+new Date().getTime(),'80%',true,true)">80000129</a></td>
+			            		<td>白金卡</td>
+			            		<td>
+			            			
+			            				
+			            				
+										储值卡
+										
+										
+										
+									
+			            		</td>
+			            		<td>
+			            			10
+			            		</td>
+				              	<td>500.0元</td>
+				              	<td>47.0元</td>
+				              	<td>
+			         				453.0元
+			         				
+									
+			         			</td>
+				              	<td>
+				              		0.0元
+				              		
+				              	</td>
+				              	<td>
+				              		
+				              	</td>
+				              	<td>
+				              		
+				              			<a class="BL" href="#" title="删除会员卡" style="cursor: pointer;" onClick="delCard('220241100')"><span class="tag bg-dot">删除卡</span></a>
+				              		
+				              		
+				              	</td>
+				            <tr>
+			            	
+			            	</table>
+		            	
+	              	</td>
+	              
+	              	<td align="center">2次</td>
+	              	<td align="center"><input style="border:1px solid #CCCCCC" type="text" size="4" readonly="readonly" value="0分"/></td>
+	              	<td align="center">Sat Mar 19 00:00:00 CST 2016&nbsp;</td>
+	             	
+			</tr>
+			
+            <tr>
+              	<td height=30><input type="checkbox" name="cb" value="41418951"></td>
+              	<td>
+    				<a class="BL" href="#" title="点击修改会员资料" style="cursor: pointer;" onClick="editmember('41418951',131071);">13551356566&nbsp;</a>
+              	</td>
+              	<td><span class="color">王一川</span></td>
+              	
+              		
+              			<td>女</td>  
+              		
+              		
+              	
+              	<td>
+              		
+              			
+              		
+              			
+              		
+              			
+              		
+              	</td>      
+              	<td>
+              		Mon Jan 25 00:00:00 CST 2016
+			  	</td>
+	              	<td colspan="10" class="subtable">
+	              		
+	              			<table class="table">
+		              		
+		              		<tr id="cardtr220202659">
+			            		<td><a class="BL" href="#" title="点击修改会员资料" style="cursor: pointer;" onClick="$.dialog('/shair/memberArchives!editMember.action?id=220202659&shopid=131071&flag=1&ts='+new Date().getTime(),'80%',true,true)">80000128</a></td>
+			            		<td>白金卡</td>
+			            		<td>
+			            			
+			            				
+			            				
+										储值卡
+										
+										
+										
+									
+			            		</td>
+			            		<td>
+			            			10
+			            		</td>
+				              	<td>400.0元</td>
+				              	<td>278.0元</td>
+				              	<td>
+			         				122.0元
+			         				
+									
+			         			</td>
+				              	<td>
+				              		80.0元
+				              		
+				              	</td>
+				              	<td>
+				              		
+				              	</td>
+				              	<td>
+				              		
+				              			<a class="BL" href="#" title="删除会员卡" style="cursor: pointer;" onClick="delCard('220202659')"><span class="tag bg-dot">删除卡</span></a>
+				              		
+				              		
+				              	</td>
+				            <tr>
+			            	
+			            	</table>
+		            	
+	              	</td>
+	              
+	              	<td align="center">8次</td>
+	              	<td align="center"><input style="border:1px solid #CCCCCC" type="text" size="4" readonly="readonly" value="0分"/></td>
+	              	<td align="center">Sun Mar 13 00:00:00 CST 2016&nbsp;</td>
+	             	
+			</tr>
+		
+</tbody>
+		</table>
+	</form>
+	</div>
+	
+	<div style="text-align: center;">
+
+<script type="text/javascript">
+	function gotos()
+	{
+		var pageInputObj = document.getElementById("myPageIndex");
+		var pageGoIndex = parseInt(pageInputObj.value);
+		if(isNaN(pageGoIndex))
+		{
+			pageInputObj.value="";
+			pageInputObj.focus();
+		}
+		else if(pageGoIndex <= 0 || pageGoIndex > 15)
+		{
+			pageInputObj.value="";
+			pageInputObj.focus();
+		}
+		else
+		{
+			goToPage(pageInputObj.value);
+		}
+	}
+	
+	function gotoByRpp()
+	{
+		var pageInputObj = document.getElementById("myPageRpp");
+		var pageGoIndex = parseInt(pageInputObj.value);
+		if(isNaN(pageGoIndex))
+		{
+			pageInputObj.value="";
+			pageInputObj.focus();
+		}
+		else
+		{
+			document.getElementById("myRpp").value=pageGoIndex;
+			goToPage(1);
+		}
+	}
+	
+	function goToPage(pageIndex){
+		document.getElementById("myCurrNum").value=pageIndex;
+		document.forms["myPageForm"].submit();
+		}
+	
+	function turnPage(event)
+	{
+		var keynum = event.keyCode;
+	    if(keynum == '13')
+	    {
+	    	gotos();
+	    }
+	}
+	
+	function setPageRpp(event)
+	{
+		var keynum = event.keyCode;
+	    if(keynum == '13')
+	    {
+	       gotoByRpp();
+	    }
+	}
+</script>
+<div id="page">
+	<ul class="pagination pagination-group">
+		
+			
+				
+					
+						<li class="active"><a class="page_cur">1</a></li>
+					
+					
+				
+			
+		
+			
+				
+					
+					
+						
+							
+							
+								<li><a href="javascript:goToPage(2)">2</a></li>
+							
+						
+					
+				
+			
+		
+			
+				
+					
+					
+						
+							
+							
+								<li><a href="javascript:goToPage(3)">3</a></li>
+							
+						
+					
+				
+			
+		
+			
+				
+					
+					
+						
+							
+							
+								<li><a href="javascript:goToPage(4)">4</a></li>
+							
+						
+					
+				
+			
+		
+			
+				
+					
+					
+						
+							
+							
+								<li><a href="javascript:goToPage(5)">5</a></li>
+							
+						
+					
+				
+			
+		
+			
+				
+					
+					
+						
+							
+							
+								<li><a href="javascript:goToPage(6)">6</a></li>
+							
+						
+					
+				
+			
+		
+			
+				
+					
+					
+						
+							
+							
+								<li><a href="javascript:goToPage(7)">7</a></li>
+							
+						
+					
+				
+			
+		
+			
+				
+					
+					
+						
+							
+							
+								<li><a href="javascript:;">...</a></li>
+							
+						
+					
+				
+			
+		
+			
+				
+					
+					
+						
+							
+							
+								<li><a href="javascript:goToPage(15)">15</a></li>
+							
+						
+					
+				
+			
+		
+			
+				
+					
+					
+						
+							
+								<li><a href="javascript:goToPage(2)" class="next_page">下一页&nbsp;></a></li>
+							
+							
+						
+					
+				
+			
+		
+			
+		
+			
+		
+			
+		
+	</ul>
+	
+		
+	
+		
+	
+		
+	
+		
+	
+		
+	
+		
+	
+		
+	
+		
+	
+		
+	
+		
+	
+		
+			<span class="height-large">&nbsp;共445条&nbsp;</span>
+		
+	
+		
+			<span class="height-large">去第&nbsp;<input class="input input-auto" size="2" type"text" id="myPageIndex" onkeyup="turnPage(event)"/>&nbsp;页</span>
+		
+	
+		
+			<span class="height-large">&nbsp;每页&nbsp;<input class="input input-auto" size="2" type"text" id="myPageRpp" readonly onkeyup="setPageRpp(event)" value="30"/>&nbsp;条&nbsp;&nbsp;</span>
+		
+	
+	<form id="myPageForm" action="/shair/memberInfo!memberlist.action" method="post"><input type="hidden" name="page.currNum" id="myCurrNum"/><input type="hidden" name="page.rpp" value="30" id="myRpp"/><input type="hidden" name="r" value="0.3168503969933729"/><input type="hidden" name="set" value="cash"/></form>
+</div></div>
+	<div id="smsSend" class="dialogs"  style="display:none;"></div>
+	<div class="dialog" id="msgsend">
+		<div class="dialog-head">
+			<span class="dialog-close close"></span> <strong id="expensesTitle">发送短信</strong>
+		</div>
+		<div id="msgid" class="dialog-body contentdiv seachbg">
+		
+		</div>
+		<div class="dialog-foot">
+		    <button class="dialog-close button">取消</button>
+   		    <button id="mysmssendbut" style="display:none;" type=button class="button bg-green"  onclick="checkLen(this);send2()">确认发送</button>
+		</div>
+    </div>
+	<!--高级查询-->
+	<div id="h_search" class="dialog">
+		<div class="dialog-head">
+ 			<span class="dialog-close close rotate-hover"></span>
+		    <strong>高级查询</strong>
+		</div>
+		<form id="data_form" method="post"  class="form-x form-auto">
+			<input type="hidden" value="" name="startDate" /> 
+			<input type="hidden" value="" name="endDate" /> 
+			<input type="hidden" value="" name="consumeStartDate" /> 
+			<input type="hidden" value="" name="consumeEndDate" /> 
+			<input type="hidden" value="" name="birthdayStartDate" /> 
+			<input type="hidden" value="" name="birthdayeEndDate" /> 
+			<input type="hidden" value="" name="startinvalidDate" /> 
+			<input type="hidden" value="" name="birthtype" /> 
+			<input type="hidden" value="" name="endinvalidDate" /> 
+			<input type="hidden" value="" name="classid" /> 
+			<input type="hidden" value="" name="employeeid" /> 
+			<input type="hidden" value="" name="mincardfee" /> 
+			<input type="hidden" value="" name="minpresentfee" /> 
+			<input type="hidden" value="" name="minsumcardfee" /> 
+			<input type="hidden" value="" name="minconsumetimes" /> 
+			<input type="hidden" value="" name="minconsumefee" /> 
+			<input type="hidden" value="" name="mincurrpoint" /> 
+			<input type="hidden" value="" name="maxcardfee" /> 
+			<input type="hidden" value="" name="maxpresentfee" /> 
+			<input type="hidden" value="" name="maxsumcardfee" /> 
+			<input type="hidden" value="" name="maxconsumetimes" /> 
+			<input type="hidden" value="" name="maxconsumefee" /> 
+			<input type="hidden" value="" name="maxcurrpoint" /> 
+			<input type="hidden" value="" name="sex" /> 
+			<input type="hidden" value="" name="buildapp" /> 
+			<input type="hidden" value="" name="keyword" /> 
+			<input type="hidden" value="" name="diffday" /> 
+			<input type="hidden" value="" name="diffday2" />
+			<input type="hidden" id="gjshopid" name="memberForm.shopid" value="131071" />
+			<input type="hidden" value="0" id="havesonFlag">
+			<input type="hidden" name="memberForm.keyword" value="" id="keyword">
+			<div class="dialog-body">
+				<div class="line">
+					<div class="form-group x6">
+					 	<div class="label">
+							<label for="">卡类型：</label>
+						</div>
+						<div class="field"> 
+							<select class="input" name="memberForm.cardtype" style="width:160px">
+								<option value="">不限</option>
+								<option value="0" >现金消费卡</option>
+								<option value="1" >储值消费卡</option>
+								<option value="2" >年卡</option>
+							</select>
+						</div>
+					</div>
+					<div class="form-group x6">
+					 	<div class="label">
+							<label for="">会员卡：</label>
+						</div>
+						<div class="field"> 
+							<select class="input" name="memberForm.cardtypeid" id="cardtypeid" style="width:160px">
+								<option value="">不限</option>
+								
+									<option value="1" >钻石卡222</option>
+								
+									<option value="111111" >大厦222</option>
+								
+									<option value="2" >贵宾卡222</option>
+								
+									<option value="3" >白金卡222</option>
+								
+									<option value="4" >剪发卡222</option>
+								
+									<option value="5" >套餐次卡222</option>
+								
+							</select>
+						</div>
+					</div>
+				</div>
+				<div class="line">
+					<div class="form-group x6">
+					 	<div class="label">
+							<label for="">会员分类:</label>
+						</div> 
+						<div class="field"> 
+						 	<select class="input" name="memberForm.classid" id="classid" style="width:160px">
+								<option value="">全部</option>
+								
+									<option value="1" >
+										A级客户
+									</option>
+								
+									<option value="2" >
+										B级客户
+									</option>
+								
+									<option value="3" >
+										C级客户
+									</option>
+								
+							</select>
+						 </div>
+					</div>
+					<div class="form-group x6">
+					 	<div class="label">
+							<label for="">性别:</label>
+						</div>
+						<div class="button-group radio">
+					    	<label class="button active"><input type="radio"  data-validate="radio:请选择"name="memberForm.sex"  value="F"  style="width:auto;"/>
+					    	<span class="icon icon-female"></span> 女</label>
+			            	<label class="button"><input type="radio" name="memberForm.sex"  value="M" style="width:auto;"/>
+					    	<span class="icon icon-male"></span> 男</label>
+				   	    </div>
+					</div>
+				</div>
+				<div class="line">
+					<div class="form-group x6">
+					 	<div class="label">
+							<label for="">注册时间:</label>
+						</div> 
+						<div class="field"> 
+						 	<input type="text"  class="input" id="startDate" name="memberForm.startDate" size="11" value="" readonly="readonly" onFocus="WdatePicker({doubleCalendar:true})"/>
+							&nbsp;至&nbsp;
+							<input type="text"  class="input" id="endDate" name="memberForm.endDate" size="11" value="" readonly="readonly" onFocus="WdatePicker({doubleCalendar:true})"/>
+						 </div>
+					 </div>
+					 <div class="form-group x6">
+					 	<div class="label">
+							<label for="">开卡人:</label>
+						</div> 
+						<div class="field">
+						 	<select name="memberForm.employeeid" id="employeeid" size="" style="width:160px">
+								<option value="">不限</option>
+								
+									<option value="1893551" >
+										张军
+									</option>
+								
+									<option value="1905372" >
+										王剑波
+									</option>
+								
+									<option value="1880699" >
+										阿文
+									</option>
+								
+									<option value="1690119" >
+										吴良坤
+									</option>
+								
+									<option value="1850091" >
+										新文
+									</option>
+								
+									<option value="1830273" >
+										阿成
+									</option>
+								
+									<option value="1920642" >
+										刘春
+									</option>
+								
+									<option value="1938417" >
+										小敏
+									</option>
+								
+									<option value="1924391" >
+										贾丽玉
+									</option>
+								
+									<option value="1880700" >
+										老板娘
+									</option>
+								
+									<option value="1920650" >
+										徐立
+									</option>
+								
+									<option value="1753999" >
+										晨羡
+									</option>
+								
+									<option value="1934949" >
+										陈梅菊
+									</option>
+								
+									<option value="1794271" >
+										龙珍运
+									</option>
+								
+									<option value="1884845" >
+										刘辉
+									</option>
+								
+							</select>
+						</div>
+					</div>
+				</div>
+				<div class="line">
+					<div class="form-group x6">
+					 	<div class="label">
+							<label for="">最后消费时间:</label>
+						</div>
+						<div class="field"> 
+						 	<input type="text"  class="input"  id="consumeStartDate" name="memberForm.consumeStartDate" size="11" value="" readonly="readonly" onFocus="WdatePicker({doubleCalendar:true})"/>
+							&nbsp;至&nbsp;
+							<input type="text"  class="input" id="consumeEndDate" name="memberForm.consumeEndDate" size="11" value="" readonly="readonly" onFocus="WdatePicker({doubleCalendar:true})"/>
+						 </div>
+					</div>
+					<div class="form-group x6">
+					 	<div class="label">
+							<label for="">生日:</label>
+						</div> 
+						<div class="field"> 
+						 	<input type="text" class="input"  id="birthdayStartDate" name="memberForm.birthdayStartDate" size="6" value="" readonly="readonly" onFocus="WdatePicker({doubleCalendar:true,dateFmt:'MM-dd'})"/>
+							&nbsp;至&nbsp;
+							<input type="text" class="input"  id="birthdayeEndDate" name="memberForm.birthdayeEndDate" size="6" value="" readonly="readonly" onFocus="WdatePicker({doubleCalendar:true,dateFmt:'MM-dd'})"/>
+							<input type="radio" name="memberForm.birthtype" value="1" checked="checked">阳历
+           					<input type="radio" name="memberForm.birthtype" value="0">阴历
+					 	</div>
+					</div>
+				</div>
+				
+					
+						<div class="line">
+							<div class="form-group x6">
+							 	<div class="label">
+									<label for="">卡余额:</label>
+								</div>
+								<div class="field"> 
+								 	<input type="text"  class="input" name="memberForm.mincardfee" value="" style="width:70px"/>
+									&nbsp;至&nbsp;
+									<input type="text"  class="input" name="memberForm.maxcardfee" value="" style="width:70px"/>
+								 </div>
+							</div>
+							<div class="form-group x6">	
+							 	<div class="label">
+									<label for="">消费次数:</label>
+								</div>
+								<div class="field"> 
+								 	<input type="text" class="input" name="memberForm.minconsumetimes" value="" style="width:70px"/>
+									&nbsp;至&nbsp;
+									<input type="text" class="input" name="memberForm.maxconsumetimes" value="" style="width:70px"/>
+								 </div>
+							</div>
+						</div>
+						<div class="line">
+							<div class="form-group x6">
+							 	<div class="label">
+									<label for="">赠送余额:</label>
+								</div>
+								<div class="field"> 
+								 	<input type="text" class="input" name="memberForm.minpresentfee" value="" style="width:70px"/>
+									&nbsp;至&nbsp;
+									<input type="text" class="input" name="memberForm.maxpresentfee" value="" style="width:70px"/>
+								 </div>
+							</div>
+							<div class="form-group x6">
+							 	<div class="label">
+									<label for="">消费金额:</label>
+								</div>
+								<div class="field"> 
+								 	<input type="text" class="input" name="memberForm.minconsumefee" value="" style="width:70px"/>
+									&nbsp;至&nbsp;
+									<input type="text" class="input" name="memberForm.maxconsumefee" value="" style="width:70px"/>
+								 </div>
+							</div>
+						</div>
+						<div class="line">
+							<div class="form-group x6">
+							 	<div class="label">
+									<label for="">储值总额:</label>
+								</div>
+								 <div class="field"> 
+								 	<input type="text" class="input" name="memberForm.minsumcardfee" value="" style="width:70px"/>
+									&nbsp;至&nbsp;
+									<input type="text" class="input" name="memberForm.maxsumcardfee" value="" style="width:70px"/>
+								 </div>
+							</div>
+							<div class="form-group x6">	
+							 	<div class="label">
+									<label for="">积分:</label>
+								</div>
+								 <div class="field"> 
+								 	<input type="text" class="input" name="memberForm.mincurrpoint" value="" style="width:70px"/>
+									&nbsp;至&nbsp;
+									<input type="text" class="input" name="memberForm.maxcurrpoint" value="" style="width:70px"/>
+								 </div>
+							</div>
+						</div>
+						<div class="line">
+							<div class="form-group x6">
+							 	<div class="label">
+									<label for="">未来店顾客:</label>
+								</div>
+								 <div class="field"> 
+								 	<input type="text" id="diffday" class="input" name="memberForm.diffday" value="" onkeyup="this.value=this.value.replace(/\D/g,'')" onBlur="if(!checkvalue(this.value)) this.focus();" style="width:30px"/>
+									&nbsp;至 
+									<input type="text" id="diffday2" class="input" name="memberForm.diffday2" value="" onkeyup="this.value=this.value.replace(/\D/g,'')" onBlur="if(!checkvalue(this.value)) this.focus();" style="width:30px"/>天
+								 </div>
+							</div>
+							<div class="form-group x6">
+							 	<div class="label">
+									<label for="">到期日期:</label>
+								</div>
+								<div class="field"> 
+								 	<input type="text"  class="input" id="startDate" name="memberForm.invaliddateStartDate" size="11" value="" readonly="readonly" onFocus="WdatePicker({doubleCalendar:true})"/>
+									&nbsp;至&nbsp;
+									<input type="text"  class="input" id="endDate" name="memberForm.invaliddateEndDate" size="11" value="" readonly="readonly" onFocus="WdatePicker({doubleCalendar:true})"/>
+								 </div>
+						 	</div>
+						</div>
+						<div class="line">
+							<div class="form-group x6">
+							 	<div class="label">
+									<label for="">显示失效会员:</label>
+								</div>
+								 <div class="button-group radio">
+								 	<input type="radio" id="invalidflag1" name="memberForm.invalidflag" value="0"  checked="checked"> 显示
+									<input type="radio" id="invalidflag2" name="memberForm.invalidflag" value="1"  > 不显示
+								 </div>
+							</div>
+						</div>
+						
+					
+			</div>
+		</form>
+		<div class="dialog-foot">
+		    <button class="dialog-close button">取消</button>
+		    <button class="button bg-green" onclick="h_search_submit()">查询</button>
+		</div>
+	</div>
+	<!-- 批量修改会员 -->
+	<div class="dialog" id="mutiledit">
+		<div class="dialog-head">
+			<span class="dialog-close close"></span> <strong id="expensesTitle">批量修改会员</strong>
+		</div>
+		<form id="" method="post"  class="form-x form-auto">
+			<input type="hidden" name="ids" id="ids" />
+			<div id="" class="dialog-body">
+				<div class="form-group">
+				 	<div class="label">
+						<label for="">修改选项：</label>
+					</div>
+					 <div class="field"> 
+						<select id="edittype" onchange="changeEdit()" name="mtype" class="input">
+							<option value="fd">失效日期</option>
+							
+								<option value="kd">是否允许跨店消费</option>
+							
+						</select>
+					 </div>
+				</div>
+				<div class="form-group">
+				 	<div class="label">
+						<label for="">修改会员：</label>
+					</div>
+					 <div class="field"> 
+						<input type="text" class="input" disabled="disabled" name="names" id="names" />
+					 </div>
+				</div>
+				<div class="form-group" id="fddd">
+				 	<div class="label">
+						<label for="">失效日期：</label>
+					</div>
+					 <div class="field"> 
+						<input type="text" class="input" onFocus="WdatePicker({doubleCalendar:true})" readonly="readonly" name="faildate" id="faildate" />
+					 </div>
+				</div>
+				<div class="form-group" style="display: none;" id="kddd">
+				 	<div class="label">
+						<label for="">允许跨店：</label>
+					</div>
+					<div class="button-group radio">
+						<input name="allowkd" type="radio" value="1" />是
+						<input name="allowkd" type="radio" value="0" />否
+					 </div>
+				</div>
+			</div>
+		</form>
+		<div class="dialog-foot">
+		    <button class="dialog-close button">取消</button>
+		    <button type="button" class="button bg-green" onclick="saveEditMutil()">保存修改</button>
+		</div>
+	</div>
+	<!-- 修改会员资料 -->
+	<div class="dialog" id="editmember">
+		<div class="dialog-head">
+			<span class="dialog-close close" onclick="$('#editmemberB').html('');"></span> <strong id="expensesTitle">会员档案</strong>
+		</div>
+		<div id="editmemberB" class="dialog-body">
+		</div>
+		<div class="dialog-foot">
+		    <button class="dialog-close button" onclick="$('#editmemberB').html('');">取消</button>
+		</div>
+	</div>
+	<input id="huiyuanziliao" type="hidden"/>
+	<div id="waitLayer" class="dialog" name="waitLayer" >
+    <center>
+        <table width="100%" height="100%" align="center" border="0" cellspacing="0" cellpadding="0">
+            <tr>
+                <td align="center"><img src="/shair/img/wait.gif" alt="请稍候……">
+                </td>
+            </tr>
+        </table>
+    </center>
+</div>
+
+</body>
+<script type="text/javascript" src="/shair/js/member.js"></script>
+<script type="text/javascript">
+	var havesonFlag=false
+	var isEdit = false;
+	function setEdit(bl){
+		isEdit = bl;
+	}
+	
+	
+	var cardTypeList = new Array();
+	
+		var map = new Map();
+		map.put("cardtypeid","1");
+		map.put("cardtypename","钻石卡");
+		map.put("cardtype","1");	
+		map.put("timeflag","0");
+		map.put("newflag","1");
+		cardTypeList[cardTypeList.length] = map;
+	
+		var map = new Map();
+		map.put("cardtypeid","111111");
+		map.put("cardtypename","大厦");
+		map.put("cardtype","1");	
+		map.put("timeflag","2");
+		map.put("newflag","1");
+		cardTypeList[cardTypeList.length] = map;
+	
+		var map = new Map();
+		map.put("cardtypeid","2");
+		map.put("cardtypename","贵宾卡");
+		map.put("cardtype","1");	
+		map.put("timeflag","0");
+		map.put("newflag","1");
+		cardTypeList[cardTypeList.length] = map;
+	
+		var map = new Map();
+		map.put("cardtypeid","3");
+		map.put("cardtypename","白金卡");
+		map.put("cardtype","1");	
+		map.put("timeflag","0");
+		map.put("newflag","1");
+		cardTypeList[cardTypeList.length] = map;
+	
+		var map = new Map();
+		map.put("cardtypeid","4");
+		map.put("cardtypename","剪发卡");
+		map.put("cardtype","1");	
+		map.put("timeflag","1");
+		map.put("newflag","1");
+		cardTypeList[cardTypeList.length] = map;
+	
+		var map = new Map();
+		map.put("cardtypeid","5");
+		map.put("cardtypename","套餐次卡");
+		map.put("cardtype","1");	
+		map.put("timeflag","1");
+		map.put("newflag","1");
+		cardTypeList[cardTypeList.length] = map;
+	
+	
+	
+	var parentid = 1;
+	var basePath = '/shair/';
+	var set = 'cash';
+
+	var actionmessage = "";
+	if (actionmessage != "") {
+		$.alert(actionmessage);
+	}
+	
+	initCardType('cardtypeid');
+	$("#cardtypeid").val("");
+
+	function keyDownCheckMember(event){
+		var keynum = event.keyCode;
+		if (keynum == '13') {
+			searh_submit();
+		}
+	}
+
+	function h_search_submit(){
+		
+		var havesonFlag = $('#havesonFlag').val();
+		$('#keyword').val('');
+		if(havesonFlag == '1' && $("#pageShopId").val() == '')
+		{
+			$.alert("请先选择分店！");
+			return false;
+		}
+		var fm = document.forms['data_form'];
+		fm.action = basePath + "memberInfo!memberlist.action?set=" + set;
+		fm.submit();
+	}
+	
+	function searh_submit(){
+		$.loadingshow();
+		var shopid = $('#pageShopId').val();
+		var havesonFlag = $('#havesonFlag').val();
+		$('#h_search').find('input,select').val('');
+		$('#gjshopid').val(shopid);
+		$('#keyword').val($('#temp_keyword').val());
+		if(havesonFlag == '1' && $("#pageShopId").val() == '')
+		{
+			$.alert("请先选择分店！");
+			return false;
+		}
+		$('#data_form').prop('action', basePath + 'memberInfo!memberlist.action?set=' + set).submit();
+		$.loadinghide();
+	}
+	
+	function exportMember() {
+		$.loadingshow();
+		var fm = document.forms['data_form'];
+		fm.action = basePath + "memberInfo!exportmember.action?set=" + set;
+		fm.submit();
+		$.loadinghide();
+	}
+	function exportMemberToRl() {
+		$.loadingshow();
+		var fm = document.forms['data_form'];
+		fm.action = basePath + "memberInfo!exportRLimember.action?set=" + set;
+		fm.submit();
+		$.loadinghide();
+	}
+	function exportTreatMemberToRl() {
+		$.loadingshow();
+		var fm = document.forms['data_form'];
+		fm.action = basePath + "memberInfo!exportRLitreatmember.action?set=" + set;
+		fm.submit();
+		$.loadinghide();
+	}
+	
+	
+	function reload_page(){
+		var havesonFlag = $('#havesonFlag').val();
+		if(havesonFlag == '1' && $("#shopid").val() == '')
+		{
+			$.alert("请先选择分店！");
+			return false;
+		}
+		$.loadingshow(); 
+		window.parent.location.href="/shair/memberInfo!memberlist.action?set=" + set;
+		$.loadinghide();
+	}
+	function checkAll(e, itemName)
+	{
+		var aa = document.getElementsByName(itemName);
+		for (var i=0; i<aa.length; i++)
+			aa[i].checked = e.checked;
+	}
+	//资料修改
+	function editmember(memberid,shopid){
+		$.loadingshow();
+		$.ajax({
+			type: 'POST',
+			url: basePath +'memberArchives!editMember.action?id='+memberid+'&shopid='+shopid+'&flag=',
+			success: function(data){
+				$('#editmemberB').html('');
+				$('#editmemberB').html(data);
+				$.dialog('#editmember','80%',true,false);
+				$.loadinghide();
+			}
+		});
+	}	
+</script>
+</html>
