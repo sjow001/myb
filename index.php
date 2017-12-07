@@ -14,14 +14,14 @@
 
 <!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
 <script src="public/bootstrap.js"></script>
-<title>美管家移动商务平台 by:Marking</title>
+<title>美业邦移动商务平台 by:Marking</title>
 </head>
 
 <body>
 
 <nav class="navbar navbar-default" role="navigation">
    <div class="navbar-header">
-      <a class="navbar-brand">美管家移动商务平台会员信息采集</a>
+      <a class="navbar-brand">美业邦移动商务平台会员信息采集</a>
    </div>
 </nav>
 
@@ -46,8 +46,8 @@
             </h4>
          </div>
          <div class="modal-body">
-		 <input type="text" class="form-control" id="login" placeholder="请输入美管家账号" value=""><br>
-		 <input type="text" class="form-control" id="passwd" placeholder="请输入美管家账号密码" value=""><br>
+		 <input type="text" class="form-control" id="login" placeholder="请输入美业邦账号" value=""><br>
+		 <input type="text" class="form-control" id="passwd" placeholder="请输入美业邦账号密码" value=""><br>
             <img src="login.php?action=code"><br><input type="text" class="form-control" id="rand" placeholder="请输入上方验证码">
          </div>
          <div class="modal-footer">

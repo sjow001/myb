@@ -9,25 +9,22 @@ header("Content-Type: text/html;charset=utf-8");
 include_once("curlapi.class.php");
 $curl = new curlapi();
 if($_GET['action'] == "code"){//获取验证码
-	$curl -> url = "http://vip8.meiguanjia.net/shair/vc";
+	$curl -> url = "http://sh.imeiyebang.com//manage/checknum.jpg?token=302123ff-f94e-4cb3-b71d-a0b220f0abf4";
 	echo $curl -> get_code();
 }else if($_GET['action'] == "login"){
+	$token = '302123ff-f94e-4cb3-b71d-a0b220f0abf4';
 	$login = urlencode($_POST['login']);
 	$passwd = $_POST['passwd'];
 	$rand = $_POST['rand'];
-	$params = "login={$login}&passwd={$passwd}&rand={$rand}";
-	$curl -> url = "http://vip8.meiguanjia.net/shair/loginAction!ajaxLogin.action?v=mgj";
+	$params = "token={$token}&username={$login}&password={$passwd}&ckecknum={$rand}";
+	$curl -> url = "http://sh.imeiyebang.com/manage/login.jhtml";
 	$curl -> params = $params;
 	$result = $curl -> login();
 	$result = json_decode($result,true);
-	if($result['code'] == 4){
-		echo "验证码错误！";
-	}else if($result['code'] == 5){
-		echo "不存在的账号！";
-	}else if($result['code'] == 6){
-		echo "密码错误！";
-	}else if($result['role']){
+	if($result['code'] == 1000000){
 		echo 1;
+	}else{
+		echo "密码错误！";
 	}
 }else if($_GET['action'] == 'curlmember'){
 	$shopname = $_REQUEST['shopname'];

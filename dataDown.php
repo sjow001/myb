@@ -20,14 +20,14 @@ $surl = "login.php?action=curlstaff&shopname=".$shopname;
 
 <!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
 <script src="public/bootstrap.js"></script>
-<title>美管家移动商务平台会员信息采集</title>
+<title>美业邦移动商务平台会员信息采集</title>
 </head>
 
 <body>
 
 <nav class="navbar navbar-default" role="navigation">
    <div class="navbar-header" style="margin-left: 300px;">
-      <a class="navbar-brand">美管家移动商务平台会员信息采集</a>
+      <a class="navbar-brand">美业邦移动商务平台会员信息采集</a>
    </div>
 </nav>
 

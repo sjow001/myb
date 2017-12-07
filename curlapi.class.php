@@ -25,15 +25,18 @@ class curlapi{
 		curl_setopt($ch, CURLOPT_FOLLOWLOCATION, 1);
 		$output = curl_exec($ch);
 		curl_close($ch);
-		preg_match("/Set-Cookie:(.*);/siU", $output, $arr);
+
+		preg_match("/Cookie:(.*);/siU", $output, $arr);
+
 		$cookies = $arr[1];
 
 		//cookies存SESSION
 		session_start();
 		$_SESSION['cookies'] = $cookies;
 		//截取GIF二进制图片
-		$explode = explode("HttpOnly",$output);
-		return $explode = trim($explode[1]);
+		$explode = explode("GMT",$output);
+
+		return $explode = trim($explode[2]);
 	}
 	
 	/*
