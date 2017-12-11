@@ -148,7 +148,7 @@ class curlapi{
 		);
 		$newdata = array();
 		$data = QueryList::Query($html, $rules)->data;
-		$k = 0;
+		$k = 1;
 		foreach ($data as &$item) {
 			$other = explode('</td>', $item['other']);
 			if(count($other) > 9) {
@@ -184,12 +184,13 @@ class curlapi{
 
 
 				ksort($other);
-				$newdata[$k][0] = ""; //卡号
+				$newdata[$k][0] = "\t".$k; //卡号
 				$newdata[$k][1] = $other[2]; //姓名
 				$newdata[$k][2] = $other[4]; //手机号
 
 				//性别
 				//$newdata[$k][3] = $other[3] == '男'?0:1; //性别
+				$newdata[$k][3] = 1; //性别
 				if(preg_match("/女/",$baseinfo)){
 					$newdata[$k][3] = 1; //性别
 				}
@@ -211,7 +212,7 @@ class curlapi{
 				$newdata[$k][11] = 0; //积分
 				$newdata[$k][13] = date('Y-m-d', strtotime($other[7])); //开卡时间
 
-				$newdata[$k][14] = '无'; //最后消费时间
+				$newdata[$k][14] = ''; //最后消费时间
 				$br = explode("(",$other[3]);
 				$newdata[$k][15] = $br[0]; //生日
 				$newdata[$k][16] = '1'; //生日类型（1阳历 公里，0阴历 农历）
@@ -299,63 +300,78 @@ class curlapi{
      * @param $shopname
      */
     public function downPackageCvs($html,$shopname, $cookie){
+
 		$rules = array(
 			//采集tr中的纯文本内容
 			'other' => array('tr','html'),
 		);
 		$newdata = array();
 		$data = QueryList::Query($html, $rules)->data;
-		foreach ($data as $k=>&$item) {
+		$k = 1;
+		foreach ($data as &$item) {
 			$other = explode('</td>', $item['other']);
-			if(count($other) > 8) {
+			if(count($other) > 9) {
 				//unset($other[0]);//去掉第一空白项
+				//unset($other[14]);//去掉14项
+				//unset($other[15]);//去掉15项
+				//unset($other[18]);//去掉15项
 				$item['other'] = $other;
-				foreach ($other as $k1 => &$v1) {
+
+				//获取基本信息
+				preg_match('/code=(.*)\"/isU', $other[8], $code);
+				$code = $code[1];
+				//卡信息
+				$this -> url = "http://sh.imeiyebang.com/report/customer/info.jhtml?code=$code&type=cards";
+				$cards = $this -> curl($cookie);
+
+				$rules = array(
+					//采集tr中的纯文本内容
+					'other' => array('tr','html'),
+				);
+				$cards = QueryList::Query($cards, $rules)->data;
+				unset($cards[0]);
+
+				foreach ($other as &$v1) {
 					$v1 = strip_tags($v1);;
 					$v1 = preg_replace("/\s\n\t/","",$v1);
 					$v1 = str_replace(' ', '', $v1);
 					$v1= trim(str_replace(PHP_EOL, '', $v1));
-					if($k1 == 5) {
-						$v1 = trim(str_replace(',', '，', $v1));
-						$v1 = explode('项目编号:', $v1);
-						unset($v1[0]);
-					}
 				}
 
-				foreach($other[5] as $k2=>$v2) {
-					$newA[0] = $other[0]; //手机号
-					$newA[1] = "\t".$other[1]; //卡号
-					$newA[2] = $other[2]; //姓名
-					$newA[3] = $other[3]; //卡名称
-					$newA[4] = $other[4]; //卡类型
+				foreach($cards as $card){
+					$card = explode('</td>', $card['other']);
+					foreach ($card as &$vc) {
+						$vc = strip_tags($vc);;
+						$vc = preg_replace("/\s\n\t/","",$vc);
+						$vc = str_replace(' ', '', $vc);
+						$vc= trim(str_replace(PHP_EOL, '', $vc));
+					}
 
-					$v2 .= "#";
+					$newA[0] = $other[4]; //手机号
+					$newA[1] = "\t".$k; //卡号
+					$newA[2] = $other[2]; //姓名
+					$newA[3] = ''; //卡名称
+					$newA[4] = ''; //卡类型
+
+					//$v2 .= "#";
 					//获取项目套餐信息
-					preg_match('/(.*)，项目名称/isU', $v2, $p1);  //项目编号
-					preg_match('/项目名称:(.*)，/isU', $v2, $p2);  //项目名称
-					preg_match('/总次数:(.*)，/isU', $v2, $p3);  //总次数
-					preg_match('/剩余次数:(.*)，/isU', $v2, $p4);  //剩余次数
-					preg_match('/单次消费金额:(.*)，/isU', $v2, $p5);  //单次消费金额
-					preg_match('/剩余金额:(.*)#/isU', $v2, $p6);  //剩余金额
-                    if(!isset($p6[1])) {
-                        preg_match('/剩余金额:(.*)，/isU', $v2, $p6);  //剩余金额
-                    }
-					preg_match('/失效日期：(.*)#/isU', $v2, $p7);  //失效日期
-					$newA[5] = isset($p1[1])?$p1[1]:' ';//项目编号
-					$newA[6] = isset($p2[1])?$p2[1]:' ';//项目名称
-					$newA[7] = isset($p3[1])?$p3[1]:' ';//总次数
-					$newA[8] = isset($p4[1])?$p4[1]:' ';//剩余次数
-					$newA[9] = isset($p5[1])?$p5[1]:' '; //单次消费金额
-					$newA[10] = isset($p6[1])?$p6[1]:' '; //剩余金额
-					$newA[11] = isset($p7[1])?$p7[1]:' ';//失效日期
+					$newA[5] = '';//项目编号
+					$newA[6] = $card[0];//项目名称
+					$newA[7] = $card[3];//总次数
+					$newA[8] = $card[5];//剩余次数
+					$newA[9] = intval($card[2]/$card[3]); //单次消费金额
+					$newA[10] = intval($newA[9]*$card[5]); //剩余金额
+					$newA[11] = '';//失效日期
 
 					$newA[12] = $newA[8];//总剩余次数
 					$newA[13] = $newA[10]; //总剩余金额
-					$newA[14] = $other[8];
+					$newA[14] = '';
 					$newdata[] = $newA;
 				}
+				$k++;
 			}
 		}
+
 		//导出CVS
 		$cvsstr = "手机号,卡号,姓名,卡名称,卡类型,项目编号,项目名称,总次数,剩余次数,单次消费金额,剩余金额,失效日期,总剩余次数,总剩余金额\n";
 		$filename = $shopname.'_会员套餐信息.csv';
