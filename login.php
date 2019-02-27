@@ -9,7 +9,7 @@ header("Content-Type: text/html;charset=utf-8");
 include_once("curlapi.class.php");
 $curl = new curlapi();
 
-$cookie = "Qs_lvt_220478=1531895850; Qs_pv_220478=4444168644555327500; Hm_lvt_f2de904b45de5fa1c111346641b534e8=1531895851; Hm_lpvt_f2de904b45de5fa1c111346641b534e8=1531895851; _ga=GA1.2.2144711309.1531895852; _gid=GA1.2.942109393.1531895852; spoor_uid=62c9f5d69c9a4b758f4c4206dbfc555c; ticket=a7ef172b-b11d-41e5-b4a1-ce4efd96ff63; spoor_login_account_code=CLERKSLOGINACCOUNT2017062913031605463449; spoor_company_code=COMPANIESCOMPANY2017062913031606253451; spoor_shop_code=-; JSESSIONID=71D37B45C6E984EC06DB111D702A4EB1; Hm_lvt_4e5bdf78b2b9fcb88736fc67709f2806=1531895855; Hm_lpvt_4e5bdf78b2b9fcb88736fc67709f2806=1531895974";
+$cookie = "spoor_uid=413adcc8cd104c35983c2dd028c36397; ticket=1e4dc1ff-da9a-420c-a622-436b1065bdb9; spoor_login_account_code=LOGINACCOUNTUSERS89225; spoor_company_code=COMPANYCOMPANIES1426; spoor_shop_code=-; JSESSIONID=41119584A4B81708943A0B80435327F1";
 if($_GET['action'] == "code"){//获取验证码
     $token = '75300908-86b0-4030-8f45-51159de724b3';
     $curl -> url = "http://sh.imeiyebang.com/manage/checknum.jpg?token=$token";
@@ -30,7 +30,7 @@ if($_GET['action'] == "code"){//获取验证码
         echo "账户密码错误！";
     }
 }else if($_GET['action'] == 'curlmember'){
-    $shopname = '18602900617';
+    $shopname = '13928819199`';
     $data = '';
 
     //获取总数
@@ -46,7 +46,7 @@ if($_GET['action'] == "code"){//获取验证码
     //$pages = 1;
 
     for($i=1; $i<=$pages; $i++){
-        $params = "pageIndex=$i&pageSize=400";
+        $params = "pageIndex=$i&pageSize=100";
         $curl -> params = $params;
         $curl -> url = "http://sh.imeiyebang.com/report/customer/list.jhtml";
         $pagesData = $curl -> getMembersPage($cookie);
@@ -58,7 +58,7 @@ if($_GET['action'] == "code"){//获取验证码
     }
     $curl -> downMembersCvs($data, $shopname,$cookie);
 }else if($_GET['action'] == 'curlpackage'){
-    $shopname = $_REQUEST['shopname'];
+    $shopname = '13928819199';
     $data = '';
 
     //获取总数
