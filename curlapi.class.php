@@ -163,6 +163,7 @@ class curlapi{
                 $code = $code[1];
                 $this -> url = "http://sh.imeiyebang.com/report/customer/info.jhtml?code=$code";
                 $baseinfo = $this -> curl($cookie);
+
                 //卡信息
                 $this -> url = "http://sh.imeiyebang.com/report/customer/info.jhtml?code=$code&type=balance";
                 $balance = $this -> curl($cookie);
@@ -203,13 +204,13 @@ class curlapi{
                 $newdata[$k][5] = ''; //折扣
 
                 //卡金余额信息,
-                $newdata[$k][6] = (int)$balance[2]; //卡余额
-                $newdata[$k][12] = (int)$balance[4]; //欠款
+                $newdata[$k][6] = (int)$balance[1]; //卡余额
+                $newdata[$k][12] = (int)$balance[3]; //欠款
                 $newdata[$k][7] = (int)$balance[0]; //充值总额
                 $newdata[$k][9] = 0; //消费总额
                 $newdata[$k][10] = 0; //赠送金
                 $newdata[$k][8] = 0; //消费次数
-                $newdata[$k][11] = 0; //积分
+                $newdata[$k][11] = (int)$balance[5]; //充值总额; //积分
                 $newdata[$k][13] = date('Y-m-d', strtotime($other[7])); //开卡时间
 
                 $newdata[$k][14] = ''; //最后消费时间
@@ -337,7 +338,6 @@ class curlapi{
                     $v1 = str_replace(' ', '', $v1);
                     $v1= trim(str_replace(PHP_EOL, '', $v1));
                 }
-
                 foreach($cards as $card){
                     $card = explode('</td>', $card['other']);
                     foreach ($card as &$vc) {
@@ -346,7 +346,6 @@ class curlapi{
                         $vc = str_replace(' ', '', $vc);
                         $vc= trim(str_replace(PHP_EOL, '', $vc));
                     }
-
                     $newA[0] = $other[4]; //手机号
                     $newA[1] = "\t".$k; //卡号
                     $newA[2] = $other[2]; //姓名
@@ -361,7 +360,7 @@ class curlapi{
                     $newA[8] = $card[5];//剩余次数
                     $newA[9] = intval($card[2]/$card[3]); //单次消费金额
                     $newA[10] = intval($newA[9]*$card[5]); //剩余金额
-                    $newA[11] = '';//失效日期
+                    $newA[11] = $card[9];;//失效日期
 
                     $newA[12] = $newA[8];//总剩余次数
                     $newA[13] = $newA[10]; //总剩余金额
